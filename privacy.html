@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | Devsynth</title>
+<meta name="description" content="How Devsynth collects, uses and protects personal information on devsynth.us, and the choices you have.">
+<!--
+  DEVSYNTH PRIVACY POLICY: HTML draft for Hamza.
+  Same nav, footer, theme switch and site.css / site.js as the home page; page styles in assets/css/pages.css.
+-->
+<script>
+  // runs before the page paints: JS flag for reveal animations, and the saved light/dark choice (no flash of the wrong theme)
+  document.documentElement.classList.add('js');
+  try { var dsTheme = localStorage.getItem('ds-theme'); if (dsTheme === 'dark' || dsTheme === 'light') document.documentElement.setAttribute('data-theme', dsTheme); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=125">
+<link rel="stylesheet" href="assets/css/pages.css?v=1">
+</head>
+<body>
+<div class="dsh">
+<!-- ===== HEADER: new nav bar. Already built on staging in WordPress header template 34656. ===== -->
+<header class="dsh-header">
+  <div class="dsh-header__bar">
+    <a class="dsh-header__logo" href="index.html" aria-label="Devsynth home"><img class="dsh-logo--on-light" src="assets/img/devsynth-logo-dark.png" alt="Devsynth" width="640" height="160"><img class="dsh-logo--on-dark" src="assets/img/devsynth-logo-white.png" alt="" width="640" height="159"></a>
+    <nav class="dsh-header__nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a></nav>
+    <button class="dsh-theme" type="button" role="switch" aria-checked="false" aria-label="Dark theme" data-theme-toggle>
+      <span class="dsh-theme__knob" aria-hidden="true"></span>
+      <span class="dsh-theme__i dsh-theme__i--sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span>
+      <span class="dsh-theme__i dsh-theme__i--moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+    </button>
+    <a class="dsh-btn dsh-btn--primary dsh-btn--sm dsh-header__cta" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a>
+    <button class="dsh-header__toggle" type="button" aria-expanded="false" aria-controls="dsh-mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="dsh-header__mnav" id="dsh-mnav" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a></nav>
+</header>
+
+<main id="main">
+<!-- ===== PRIVACY POLICY: plain-language draft, structure from competitor research. NOT LEGAL ADVICE: a lawyer must review before it goes live.
+     Yellow tags mark facts Ali or the lawyer must fill in. ===== -->
+<section class="dsh-ph dsh-ph--center" style="padding-bottom:40px">
+  <div class="dsh-wrap">
+    <nav class="dsh-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Privacy Policy</span></nav>
+    <div class="dsh-ph__grid">
+      <div data-reveal>
+        <span class="dsh-eyebrow">LEGAL</span>
+        <h1>Privacy Policy</h1>
+        <p class="dsh-lead">How we collect, use and protect your information when you visit devsynth.us or get in touch with us.</p>
+        <div class="dsh-meta" style="justify-content:center"><span>Last updated: <span class="dsh-todo">date it goes live</span></span><span>Applies to devsynth.us</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="dsh-blk" style="border-top:0;padding-top:20px">
+  <div class="dsh-wrap">
+    <div class="dsh-draft" style="margin-bottom:48px"><span aria-hidden="true">⚠</span><div><b>Draft for review.</b> This page is a plain-language starting point, not legal advice. A lawyer should review it before it goes live. Yellow tags show what still needs to be filled in.</div></div>
+    <div class="dsh-article">
+      <nav class="dsh-toc" data-toc aria-label="On this page"><b>On this page</b><a href="#who">Who we are</a><a href="#scope">What this policy covers</a><a href="#collect">What we collect</a><a href="#use">How we use it</a><a href="#cookies">Cookies and tracking</a><a href="#dnt">Do Not Track and Global Privacy Control</a><a href="#share">Who we share it with</a><a href="#transfers">International transfers</a><a href="#keep">How long we keep it</a><a href="#security">How we protect it</a><a href="#rights">Your rights and choices</a><a href="#children">Children</a><a href="#jobs">Job applicants</a><a href="#changes">Changes to this policy</a><a href="#contact">Contact us</a></nav>
+      <div class="dsh-prose">
+        <div class="dsh-legal-sum"><h2>The short version</h2><ul><li>We collect what you send us (name, email, project details) and basic site usage data.</li><li>We use it to reply to you, run the site and improve our marketing.</li><li>We do not sell your personal information.</li><li>We use a few named tools, such as Google Analytics, LinkedIn and Calendly.</li><li>You can ask us to see, correct or delete your data at any time.</li></ul></div>
+        <h2 id="who">Who we are</h2><p>Devsynth (<span class="dsh-todo">legal entity name</span>) is a software design and engineering company with a US office in St. Petersburg, Florida, 33702. Our engineering team works from Pakistan. In this policy, “Devsynth”, “we” and “us” mean <span class="dsh-todo">legal entity name</span>. <span class="dsh-todo">lawyer: role of the Pakistan team (processor or separate controller)</span></p><p>Questions about this policy: <a href="mailto:info@devsynth.us">info@devsynth.us</a> <span class="dsh-todo">or privacy@devsynth.us</span>.</p><h2 id="scope">What this policy covers</h2><p>This policy covers devsynth.us, our contact form, call bookings, emails and marketing. Data we handle for clients inside the products we build is covered by our contracts with those clients, not by this policy.</p><h2 id="collect">What we collect</h2><p><strong>What you give us:</strong> your name, work email, company, what you need and any project details you send through our form, by email or when you book a call. If you apply for a job, your CV and portfolio.</p><p><strong>What we collect automatically:</strong> your IP address, device and browser type, pages you visit, the page that sent you to us, campaign tags in the link (UTM parameters) and cookies. See <a href="#cookies">Cookies and tracking</a>.</p><p><strong>What we get from others:</strong> details you share with us on LinkedIn, for example through a LinkedIn lead form, and referrals from people who know you. <span class="dsh-todo">Ali: confirm the full list of sources</span></p><h2 id="use">How we use it</h2><ul><li>To reply to your message and prepare a proposal.</li><li>To schedule and hold calls.</li><li>To run, secure and improve the website.</li><li>To understand which pages and campaigns work (analytics).</li><li>To send occasional updates, only if you agreed to them.</li><li>To review job applications.</li><li>To meet legal duties.</li></ul><p>If you’re in the EU or UK, we rely on your consent, on steps you asked us to take before a contract, on our legitimate interest in running and growing our business, or on a legal duty, depending on the purpose. <span class="dsh-todo">lawyer: map each purpose to a legal basis</span></p><h2 id="cookies">Cookies and tracking</h2><p>We use these tools on the site <span class="dsh-todo">Ali: confirm the real list</span>:</p><ul><li><strong>Google Analytics 4</strong>, to count visits and see which pages are useful.</li><li><strong>LinkedIn Insight Tag</strong>, to measure our LinkedIn ads.</li><li><strong>Calendly</strong>, to book calls.</li><li><strong>Our form and email tools</strong>, to receive and answer messages.</li><li><strong>Spam protection</strong> on forms <span class="dsh-todo">reCAPTCHA or Turnstile</span>.</li></ul><p>You can block or delete cookies in your browser settings. Visitors from the EU and UK are asked for consent before analytics and ad cookies load. <span class="dsh-todo">lawyer: banner for all visitors or EU/UK only</span></p><h2 id="dnt">Do Not Track and Global Privacy Control</h2><p>Some browsers send a “Do Not Track” or “Global Privacy Control” signal. <span class="dsh-todo">lawyer: state how the site responds to each</span></p><h2 id="share">Who we share it with</h2><p><strong>We do not sell your personal information.</strong> We share it only with:</p><ul><li>Service providers who help us run the business, such as hosting, email, scheduling, analytics and our CRM.</li><li>Professional advisers, such as lawyers and accountants.</li><li>Authorities, when the law requires it.</li><li>A buyer or successor, if Devsynth is part of a merger or sale.</li></ul><p><span class="dsh-todo">lawyer: whether the LinkedIn Insight Tag counts as sharing for ads</span></p><h2 id="transfers">International transfers</h2><p>Your data is stored with providers in the United States and may be accessed by our team in Pakistan to answer you and deliver our services. We protect it with contracts, access controls and limited access. <span class="dsh-todo">lawyer: transfer mechanism for EU/UK data</span></p><h2 id="keep">How long we keep it</h2><ul><li>Messages from people who don’t become clients: <span class="dsh-todo">X months</span>.</li><li>Client contacts: for as long as we work together, plus <span class="dsh-todo">X years</span>.</li><li>Job applications: <span class="dsh-todo">X months</span>.</li><li>Analytics data: as set in each tool <span class="dsh-todo">for example 14 months in GA4</span>.</li></ul><h2 id="security">How we protect it</h2><p>We use encrypted connections, limit access to the people who need it and protect our accounts with two-step sign-in. No system is perfectly secure, but we work to keep your data safe and will tell you if a breach affects you, as the law requires.</p><h2 id="rights">Your rights and choices</h2><p>You can ask us to show, correct or delete the personal data we hold about you, and you can unsubscribe from our emails at any time with the link in each email.</p><p><strong>EU and UK:</strong> you also have the right to object, to limit how we use your data, to move it and to complain to your local data protection authority.</p><p><strong>California and Canada:</strong> <span class="dsh-todo">lawyer: CCPA and PIPEDA wording</span></p><p>To make a request, email <a href="mailto:info@devsynth.us">info@devsynth.us</a>. We may ask you to confirm who you are first.</p><h2 id="children">Children</h2><p>Our site is for businesses. It is not meant for children, and we do not knowingly collect data from anyone under 16.</p><h2 id="jobs">Job applicants</h2><p>If you apply to work with us, your application is seen only by the people involved in hiring and kept for <span class="dsh-todo">X months</span>. We never ask for payment during hiring. If someone offers you a Devsynth job and asks for money or personal documents over chat, it is not us. Email us to check.</p><h2 id="changes">Changes to this policy</h2><p>We’ll update this page when our practices change and show the new date at the top. For big changes, we’ll add a note on the site.</p><h2 id="contact">Contact us</h2><p>Email <a href="mailto:info@devsynth.us">info@devsynth.us</a>, call <a href="tel:+17274054545">+1 (727) 405-4545</a>, or write to <span class="dsh-todo">legal entity name</span>, St. Petersburg, FL 33702, United States <span class="dsh-todo">full postal address</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER: new design. Hamza: rebuild WordPress footer template 34817 to match. ===== -->
+<footer class="dsh-footer">
+  <div class="dsh-wrap">
+    <div class="dsh-footer__top">
+      <div class="dsh-footer__brand"><img src="assets/img/devsynth-logo-footer.png" alt="Devsynth" width="220" height="113" loading="lazy"><p>Technology. Design. Engineering. Together.</p>
+        <ul class="dsh-details"><li><a href="mailto:info@devsynth.us">info@devsynth.us</a></li><li><a href="tel:+17274054545">+1 (727) 405-4545</a></li><li>St. Petersburg, FL 33702, United States</li><li><a href="https://www.linkedin.com/company/devsynth-us/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div class="dsh-footer__col"><h4>RESOURCES</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div><div class="dsh-footer__col"><h4>SERVICES</h4><ul><li><a href="/services/custom-web-application-development/">Web Apps</a></li><li><a href="/services/cross-platform-mobile-apps/">Mobile Apps</a></li><li><a href="/services/customer-and-admin-portals/">Portals</a></li><li><a href="/services/saas-product-development/">SaaS Products</a></li><li><a href="service-mvp.html">MVP Development</a></li><li><a href="service-ai-features.html">Machine Learning</a></li><li><a href="/services/api-development-and-integrations/">API Integration</a></li><li><a href="/services/cloud-devops-and-support/">Cloud &amp; DevOps</a></li><li><a href="/services/payment-and-subscription-systems/">Payment Systems</a></li><li><a href="/services/data-engineering-and-dashboards/">Data &amp; Dashboards</a></li><li><a href="/services/ui-and-ux-design/">UI/UX Design</a></li><li><a href="/services/qa-and-software-testing/">QA Testing</a></li></ul></div><div class="dsh-footer__col"><h4>CASE STUDIES</h4><ul><li><a href="case-study-evdc.html">EVDC</a></li><li><a href="/case-studies/larimar-training/">Larimar Training</a></li><li><a href="/case-studies/al-qand-exchange-app/">Al Qand Exchange</a></li><li><a href="/case-studies/proud-profits/">Proud Profits</a></li><li><a href="/case-studies/outsorcy-sdr-platform/">Outsorcy SDR Platform</a></li><li><a href="/case-studies/chalk-performance-training/">Chalk Performance Training</a></li></ul></div>
+    </div>
+    <div class="dsh-footer__bottom"><span>© 2026 Devsynth. All rights reserved.</span><span>BUILDING DIGITAL PRODUCTS FOR WHAT’S NEXT.</span></div>
+  </div>
+</footer>
+
+</div>
+<script src="assets/js/pages.js?v=1" defer></script>
+<script src="assets/js/site.js?v=32"></script>
+
+</body>
+</html>

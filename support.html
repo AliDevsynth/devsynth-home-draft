@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support and Maintenance | Devsynth</title>
+<meta name="description" content="How Devsynth clients report an issue, how fast we respond, and ongoing support plans for apps we built or took over from another team.">
+<!--
+  DEVSYNTH SUPPORT PAGE: HTML draft for Hamza.
+  Same nav, footer, theme switch and site.css / site.js as the home page; page styles in assets/css/pages.css.
+-->
+<script>
+  // runs before the page paints: JS flag for reveal animations, and the saved light/dark choice (no flash of the wrong theme)
+  document.documentElement.classList.add('js');
+  try { var dsTheme = localStorage.getItem('ds-theme'); if (dsTheme === 'dark' || dsTheme === 'light') document.documentElement.setAttribute('data-theme', dsTheme); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=125">
+<link rel="stylesheet" href="assets/css/pages.css?v=1">
+</head>
+<body>
+<div class="dsh">
+<!-- ===== HEADER: new nav bar. Already built on staging in WordPress header template 34656. ===== -->
+<header class="dsh-header">
+  <div class="dsh-header__bar">
+    <a class="dsh-header__logo" href="index.html" aria-label="Devsynth home"><img class="dsh-logo--on-light" src="assets/img/devsynth-logo-dark.png" alt="Devsynth" width="640" height="160"><img class="dsh-logo--on-dark" src="assets/img/devsynth-logo-white.png" alt="" width="640" height="159"></a>
+    <nav class="dsh-header__nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a></nav>
+    <button class="dsh-theme" type="button" role="switch" aria-checked="false" aria-label="Dark theme" data-theme-toggle>
+      <span class="dsh-theme__knob" aria-hidden="true"></span>
+      <span class="dsh-theme__i dsh-theme__i--sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span>
+      <span class="dsh-theme__i dsh-theme__i--moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+    </button>
+    <a class="dsh-btn dsh-btn--primary dsh-btn--sm dsh-header__cta" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a>
+    <button class="dsh-header__toggle" type="button" aria-expanded="false" aria-controls="dsh-mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="dsh-header__mnav" id="dsh-mnav" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a></nav>
+</header>
+
+<main id="main">
+<!-- ===== SUPPORT PAGE: for current clients (how to raise an issue, severity targets) and for new clients (maintenance plans, takeovers).
+     Every response time and plan name is a placeholder until Ali confirms. ===== -->
+<section class="dsh-ph">
+  <div class="dsh-wrap">
+    <nav class="dsh-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Support</span></nav>
+    <div class="dsh-ph__grid">
+      <div data-reveal>
+        <span class="dsh-eyebrow">SUPPORT AND MAINTENANCE</span>
+        <h1>Help when you need it. <span class="dsh-grad">Care when you don’t.</span></h1>
+        <p class="dsh-lead">Already a client? Here’s how to report an issue and what to expect. Need someone to look after your app? We offer ongoing support, even for apps we didn’t build.</p>
+        <div class="dsh-ph__ctas"><a class="dsh-btn dsh-btn--primary" href="#report">Report an issue →</a><a class="dsh-btn dsh-btn--ghost" href="#plans">Get a support plan</a></div>
+      </div>
+      <div class="dsh-hpanel" data-reveal>
+        <div class="dsh-hpanel__bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <h3>Something broken right now?</h3>
+        <ol>
+          <li><div><b>Email support</b><a href="mailto:support@devsynth.us" style="color:#7FD3FF">support@devsynth.us</a> <span class="dsh-todo">create inbox or use info@</span></div></li>
+          <li><div><b>Use your client channel</b>Clients on a plan can post in our shared Slack or Teams channel.</div></li>
+          <li><div><b>Critical issue?</b>Call <a href="tel:+17274054545" style="color:#7FD3FF">+1 (727) 405-4545</a> after you email.</div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dsh-blk" id="report">
+  <div class="dsh-wrap dsh-split">
+    <div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">REPORT AN ISSUE</span><h2>What to send us.</h2><p class="dsh-lead">The more we know up front, the faster we can fix it. A short email with these details is perfect.</p></div>
+    <ul class="dsh-commit">
+      <li data-reveal><b>Who and which app</b><span>Your name, your company and the product or app that has the problem.</span></li>
+      <li data-reveal><b>What happened</b><span>What you saw, and what you expected to happen instead.</span></li>
+      <li data-reveal><b>Steps to repeat it</b><span>What you clicked or did just before it went wrong.</span></li>
+      <li data-reveal><b>Where it happened</b><span>Live or test version, plus the browser or phone you used.</span></li>
+      <li data-reveal><b>Screenshots</b><span>A screenshot or short screen recording helps a lot.</span></li>
+      <li data-reveal><b>How many people</b><span>One user, some users, or everyone? This sets the priority.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="dsh-blk dsh-blk--alt">
+  <div class="dsh-wrap">
+    <div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">WHAT TO EXPECT</span><h2>How fast we respond.</h2><p class="dsh-lead">Every issue gets a priority. You get a reply with a ticket number, then updates until it’s fixed.</p></div>
+    <div class="dsh-table-wrap" data-reveal><table class="dsh-table"><thead><tr><th>Priority</th><th>For example</th><th>First response</th><th>Updates</th></tr></thead><tbody><tr><td><span class="dsh-sev" style="--c:#EF4444">Critical</span></td><td>App down, payments failing, data at risk</td><td><span class="dsh-todo">[X hours]</span></td><td>Every [X] hours</td></tr><tr><td><span class="dsh-sev" style="--c:#F59E0B">High</span></td><td>A key feature is broken and there’s no workaround</td><td><span class="dsh-todo">[X business hours]</span></td><td>Daily</td></tr><tr><td><span class="dsh-sev" style="--c:#0EA5E9">Normal</span></td><td>A bug with a workaround</td><td><span class="dsh-todo">[X business days]</span></td><td>As progress is made</td></tr><tr><td><span class="dsh-sev" style="--c:#94A3B8">Low</span></td><td>A cosmetic issue or a small request</td><td><span class="dsh-todo">[X business days]</span></td><td>Weekly</td></tr></tbody></table></div>
+    <p style="margin-top:16px;font-size:14px;color:#64748B">Support hours: <span class="dsh-todo">Mon to Fri, X am to X pm ET</span>. Response times are targets, unless they’re written into your support agreement. <span class="dsh-todo">lawyer check</span></p>
+  </div>
+</section>
+
+<section class="dsh-blk" id="plans">
+  <div class="dsh-wrap">
+    <div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">SUPPORT PLANS</span><h2>Keep your product healthy.</h2><p class="dsh-lead">Pick the level of care your product needs. Every plan is quoted after a short call, and you can change plans as you grow.</p></div>
+    <div class="dsh-cards">
+      <article class="dsh-plan" data-reveal><span class="dsh-plan__for">For stable products</span><h3>Care <span class="dsh-todo">name</span></h3><p>The basics that keep a live app safe and running.</p><ul class="dsh-checks"><li>Uptime monitoring and alerts</li><li>Monthly security and library updates</li><li>Bug fixes from a monthly block of hours</li><li>A short monthly report</li></ul><a class="dsh-btn dsh-btn--ghost" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Talk to us →</a></article>
+      <article class="dsh-plan dsh-plan--hi" data-reveal><span class="dsh-plan__for">For products still growing</span><h3>Growth <span class="dsh-todo">name</span></h3><p>Everything in Care, plus room to keep improving.</p><ul class="dsh-checks"><li>Everything in Care</li><li>Small features and improvements</li><li>Speed and performance tuning</li><li>A roadmap call every quarter</li></ul><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Talk to us →</a></article>
+      <article class="dsh-plan" data-reveal><span class="dsh-plan__for">For business-critical apps</span><h3>Priority <span class="dsh-todo">name</span></h3><p>Everything in Growth, with faster response and a named engineer.</p><ul class="dsh-checks"><li>Everything in Growth</li><li>Faster response targets</li><li>After-hours cover for critical issues</li><li>A named engineer who knows your app</li></ul><a class="dsh-btn dsh-btn--ghost" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Talk to us →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="dsh-blk dsh-blk--alt">
+  <div class="dsh-wrap">
+    <div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">APPS WE DIDN’T BUILD</span><h2>Taking over from another team?</h2><p class="dsh-lead">We can look after apps built by someone else. We start with a code review, so you know what you have before we take it on.</p></div>
+    <ol class="dsh-steps"><li data-reveal><b>01</b><h3>Review</h3><p>We review the code, hosting and open issues, and tell you honestly what we find.</p></li><li data-reveal><b>02</b><h3>Hand over</h3><p>We get access to code, servers and accounts, and write down how everything fits together.</p></li><li data-reveal><b>03</b><h3>Set up</h3><p>Monitoring, alerts and backups, plus the response targets we agree with you.</p></li><li data-reveal><b>04</b><h3>Look after</h3><p>Monthly updates, fixes and a short report on what we did.</p></li></ol>
+  </div>
+</section>
+
+<section class="dsh-blk">
+  <div class="dsh-wrap dsh-split">
+    <div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">FAQ</span><h2>Support questions.</h2><p class="dsh-lead">Found a security problem in an app we built, or on this site? Email <a href="mailto:security@devsynth.us" style="color:#024AD8;font-weight:600">security@devsynth.us</a> <span class="dsh-todo">create inbox</span>.</p></div>
+    <div class="dsh-faqs"><details class="dsh-q" open><summary>Can you support an app another team built?<span aria-hidden="true"></span></summary><p>Yes. We start with a code review so you know what you have, then take it on if it makes sense for both sides.</p></details><details class="dsh-q"><summary>Who will work on my app?<span aria-hidden="true"></span></summary><p>Engineers who know your product. On the Priority plan you get a named engineer.</p></details><details class="dsh-q"><summary>How do you report what you did?<span aria-hidden="true"></span></summary><p>You get a short monthly report: what we updated, what we fixed and what we recommend next.</p></details><details class="dsh-q"><summary>What does a plan cost?<span aria-hidden="true"></span></summary><p>It depends on the size of your product and the level of care, so we quote after a short call. We don’t publish fixed prices.</p></details><details class="dsh-q"><summary>Can I change or cancel my plan?<span aria-hidden="true"></span></summary><p>Yes. You can move between plans as your product changes. <span class="dsh-todo">Ali: confirm notice period</span></p></details></div>
+  </div>
+</section>
+<section class="dsh-cta" aria-labelledby="dsh-cta-h">
+  <span class="dsh-cta__shade" aria-hidden="true"></span>
+  <div class="dsh-cta__inner" data-reveal>
+    <div class="dsh-cta__copy"><span class="dsh-eyebrow">SUPPORT</span><h2 id="dsh-cta-h">Need someone to look after <br>your product?</h2><p>Book a 30-minute call. Tell us about your app and we’ll suggest the right level of care.</p></div>
+    <div class="dsh-cta__btns"><a class="dsh-btn dsh-cta__primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call →</a><a class="dsh-btn dsh-cta__ghost" href="mailto:support@devsynth.us">Email support</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER: new design. Hamza: rebuild WordPress footer template 34817 to match. ===== -->
+<footer class="dsh-footer">
+  <div class="dsh-wrap">
+    <div class="dsh-footer__top">
+      <div class="dsh-footer__brand"><img src="assets/img/devsynth-logo-footer.png" alt="Devsynth" width="220" height="113" loading="lazy"><p>Technology. Design. Engineering. Together.</p>
+        <ul class="dsh-details"><li><a href="mailto:info@devsynth.us">info@devsynth.us</a></li><li><a href="tel:+17274054545">+1 (727) 405-4545</a></li><li>St. Petersburg, FL 33702, United States</li><li><a href="https://www.linkedin.com/company/devsynth-us/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div class="dsh-footer__col"><h4>RESOURCES</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div><div class="dsh-footer__col"><h4>SERVICES</h4><ul><li><a href="/services/custom-web-application-development/">Web Apps</a></li><li><a href="/services/cross-platform-mobile-apps/">Mobile Apps</a></li><li><a href="/services/customer-and-admin-portals/">Portals</a></li><li><a href="/services/saas-product-development/">SaaS Products</a></li><li><a href="service-mvp.html">MVP Development</a></li><li><a href="service-ai-features.html">Machine Learning</a></li><li><a href="/services/api-development-and-integrations/">API Integration</a></li><li><a href="/services/cloud-devops-and-support/">Cloud &amp; DevOps</a></li><li><a href="/services/payment-and-subscription-systems/">Payment Systems</a></li><li><a href="/services/data-engineering-and-dashboards/">Data &amp; Dashboards</a></li><li><a href="/services/ui-and-ux-design/">UI/UX Design</a></li><li><a href="/services/qa-and-software-testing/">QA Testing</a></li></ul></div><div class="dsh-footer__col"><h4>CASE STUDIES</h4><ul><li><a href="case-study-evdc.html">EVDC</a></li><li><a href="/case-studies/larimar-training/">Larimar Training</a></li><li><a href="/case-studies/al-qand-exchange-app/">Al Qand Exchange</a></li><li><a href="/case-studies/proud-profits/">Proud Profits</a></li><li><a href="/case-studies/outsorcy-sdr-platform/">Outsorcy SDR Platform</a></li><li><a href="/case-studies/chalk-performance-training/">Chalk Performance Training</a></li></ul></div>
+    </div>
+    <div class="dsh-footer__bottom"><span>© 2026 Devsynth. All rights reserved.</span><span>BUILDING DIGITAL PRODUCTS FOR WHAT’S NEXT.</span></div>
+  </div>
+</footer>
+
+</div>
+<script src="assets/js/pages.js?v=1" defer></script>
+<script src="assets/js/site.js?v=32"></script>
+
+</body>
+</html>

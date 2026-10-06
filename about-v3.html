@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Devsynth | The Product Team That Stays With You</title>
+<meta name="description" content="Devsynth is a product engineering studio. We design, build and support mobile apps, web platforms and AI features for startups and growing companies.">
+<!--
+  DEVSYNTH ABOUT PAGE v3 (redesign draft): HTML draft for Hamza.
+  Same nav, footer, theme switch and site.css / site.js as the home page; page styles in assets/css/pages.css.
+-->
+<script>
+  // runs before the page paints: JS flag for reveal animations, and the saved light/dark choice (no flash of the wrong theme)
+  document.documentElement.classList.add('js');
+  try { var dsTheme = localStorage.getItem('ds-theme'); if (dsTheme === 'dark' || dsTheme === 'light') document.documentElement.setAttribute('data-theme', dsTheme); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=125">
+<link rel="stylesheet" href="assets/css/pages.css?v=1">
+<link rel="stylesheet" href="assets/css/about3.css?v=3">
+</head>
+<body>
+<div class="dsh">
+<!-- ===== HEADER: new nav bar. Already built on staging in WordPress header template 34656. ===== -->
+<header class="dsh-header">
+  <div class="dsh-header__bar">
+    <a class="dsh-header__logo" href="index.html" aria-label="Devsynth home"><img class="dsh-logo--on-light" src="assets/img/devsynth-logo-dark.png" alt="Devsynth" width="640" height="160"><img class="dsh-logo--on-dark" src="assets/img/devsynth-logo-white.png" alt="" width="640" height="159"></a>
+    <nav class="dsh-header__nav" aria-label="Main"><a href="index.html">Home</a><a aria-current="page" href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a></nav>
+    <button class="dsh-theme" type="button" role="switch" aria-checked="false" aria-label="Dark theme" data-theme-toggle>
+      <span class="dsh-theme__knob" aria-hidden="true"></span>
+      <span class="dsh-theme__i dsh-theme__i--sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span>
+      <span class="dsh-theme__i dsh-theme__i--moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+    </button>
+    <a class="dsh-btn dsh-btn--primary dsh-btn--sm dsh-header__cta" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a>
+    <button class="dsh-header__toggle" type="button" aria-expanded="false" aria-controls="dsh-mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="dsh-header__mnav" id="dsh-mnav" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a></nav>
+</header>
+
+<main id="main">
+<!-- ===== ABOUT v3 (redesign draft): centered hero with three floating live windows (Slack, PR checks, Friday demo), scroll-lit story, who-we-work-with cards with mini animations,
+     principle tabs with live windows, process line that fills on scroll, team with the live "our team today" ribbon, chat FAQ, CTA. ===== -->
+<section class="ab3-hero ab3-hero--b">
+  <div class="dsh-wrap">
+    <nav class="dsh-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">About</span></nav>
+    <div class="ab3-hb__copy" data-reveal>
+      <span class="dsh-eyebrow">ABOUT DEVSYNTH</span>
+      <h1>The product team that<br class="ab3-br"> <span class="dsh-grad">stays with you.</span></h1>
+      <p class="dsh-lead">Devsynth is a product engineering studio. We design, build and support mobile apps, web platforms and AI features for startups and growing companies, and we stay accountable for them long after launch.</p>
+      <div class="ab3-hero__ctas"><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call →</a><a class="dsh-btn dsh-btn--ghost" href="case-studies.html">See our work</a></div>
+    </div>
+    <div class="ab3-hb__row" aria-hidden="true">
+      <div class="ab3-win" data-reveal><div class="ab3-win__bar"><i></i><i></i><i></i><span>Slack · #devsynth-shared</span></div>
+        <div class="ab3-hb__body"><div class="ab3-hb__msg"><small>Your Devsynth PM</small>Demo is ready for Friday. Staging link is in the thread.</div><div class="ab3-hb__msg ab3-hb__msg--you"><small>You</small>Perfect, inviting the investors 🙌</div></div></div>
+      <div class="ab3-win" data-reveal><div class="ab3-win__bar"><i></i><i></i><i></i><span>your-company / app · Pull request</span><em>Live</em></div>
+        <div class="ab3-hb__body ab3-hb__pr"><b>#482 feat: owner payouts dashboard</b><span>Ready to merge</span>
+          <ul class="ab3-hb__checks" data-checks><li>lint</li><li>unit tests</li><li>e2e: checkout</li><li>preview deploy</li></ul></div></div>
+      <div class="ab3-win" data-reveal><div class="ab3-win__bar"><i></i><i></i><i></i><span>Friday demo</span><em>REC</em></div>
+        <div class="ab3-hb__body"><div class="ab3-hb__call"><div class="ab3-call__tile is-talk"><span class="ab3-av">PM</span><small>Devsynth</small></div><div class="ab3-call__tile"><span class="ab3-av ab3-av--g">YOU</span><small>You</small></div><div class="ab3-call__tile"><span class="ab3-av">DS</span><small>Engineer</small></div><div class="ab3-call__tile"><span class="ab3-av ab3-av--g">CT</span><small>Your CTO</small></div></div></div></div>
+    </div>
+    <ul class="ab3-hb__stats" data-reveal>
+      <li><b data-count="20" data-suffix="+">20+</b><span>products designed, built and shipped</span></li>
+      <li><b data-count="1.2" data-suffix="M+">1.2M+</b><span>charging sessions on an EV platform we built</span></li>
+      <li><b data-count="8">8</b><span>industries, from fintech to healthcare</span></li>
+      <li><b data-count="2">2</b><span>ways to work: fixed price or a monthly team</span></li>
+    </ul>
+  </div>
+</section><section class="dsh-sec ab3-story dsh-bg-logo">
+  <div class="dsh-wrap ab3-story__grid">
+    <div class="ab3-story__head" data-reveal>
+      <span class="dsh-eyebrow">OUR STORY</span>
+      <h2>Built by engineers <span class="dsh-grad">who ship.</span></h2>
+      <p class="dsh-lead">Founders and product teams in the US, Canada, the UAE and Europe, from first MVPs to platforms with real users and real payments.</p>
+    </div>
+    <div>
+      <p class="ab3-lit">Devsynth was started by engineers who had spent years building and running products at scale, and kept seeing the same thing go wrong with outside teams: developers who went quiet, builds left half finished, and code nobody wanted to own.</p>
+      <p class="ab3-lit">So we built the team we would want to hire. Senior engineers who show working software every week, work inside your tools, and take responsibility for what they ship.</p>
+      <figure class="ab3-quote" data-reveal><span class="ab3-av">AH</span><blockquote style="margin:0"><p>“We’d rather tell you not to build something than build the wrong thing well.”</p><cite>Ali Hunain, Co-founder, Devsynth <span class="dsh-todo">Ali: confirm quote</span></cite></blockquote></figure>
+    </div>
+  </div>
+</section><section class="dsh-sec">
+  <div class="dsh-wrap">
+    <div class="ab3-head ab3-head--row" data-reveal><div><span class="dsh-eyebrow">WHO WE WORK WITH</span><h2>Built for teams that <span class="dsh-grad">need to ship.</span></h2></div>
+      <p class="dsh-lead">Most of our clients are founders, CTOs and product teams at B2B SaaS companies in the US and Canada, usually between 2 and 200 people.</p></div>
+    <div class="ab3-who">
+      <article class="ab3-card" data-reveal>
+        <div class="ab3-mini" aria-hidden="true"><div class="ab3-stack"><i></i><i></i><i></i><b>v1</b></div></div>
+        <small>New product</small><h3>Founders building a first version</h3><p>You have the idea and the users in mind. We scope an MVP you can launch, and build it for a fixed price in milestones.</p><a href="service-mvp.html">MVP development →</a>
+      </article>
+      <article class="ab3-card" data-reveal>
+        <div class="ab3-mini" aria-hidden="true"><div class="ab3-stall"><div class="ab3-stall__row"><span>Your product</span><em>Launched</em></div><div class="ab3-stall__bar"><i></i></div><div class="ab3-stall__tags"><span class="is-red">Stalled at 62%</span><span>Code review</span><span>Fixed</span></div></div></div>
+        <small>Stalled build</small><h3>Teams with a half-finished product</h3><p>A previous team went quiet or the code is hard to work with. We review what is there, tell you honestly what to keep, and get it to launch.</p><a href="contact.html">Talk to us →</a>
+      </article>
+      <article class="ab3-card" data-reveal>
+        <div class="ab3-mini" aria-hidden="true"><div><div class="ab3-teamrow"><span class="ab3-av ab3-av--g">YOU</span><span class="ab3-av ab3-av--g">CT</span><span class="ab3-av">DS</span><span class="ab3-av">DS</span><span class="ab3-av">PM</span></div><span>+ engineers and a PM, in your standups</span></div></div>
+        <small>Growing team</small><h3>SaaS teams that need more hands</h3><p>Your roadmap is bigger than your team. Our engineers join your standups and sprint board on a monthly plan, starting with a paid 2-week trial sprint.</p><a href="/#how-we-work">Two ways to work →</a>
+      </article>
+    </div>
+  </div>
+</section><section class="dsh-sec dsh-bg-logo" id="how">
+  <div class="dsh-wrap">
+    <div class="ab3-head" data-reveal><span class="dsh-eyebrow">HOW WE WORK</span><h2>What you can <span class="dsh-grad">count on.</span></h2>
+      <p class="dsh-lead">Six practices you can check on every project, whether it’s a two-week sprint or a two-year partnership.</p></div>
+    <div class="ab3-how" data-ab3-tabs>
+      <div class="ab3-tabs" role="tablist" data-reveal><button class="ab3-tab" type="button" role="tab"><span class="ab3-tab__n">01</span><span><b>A demo every week</b><p>You see working software every week, not a status report. If something slips, you hear it from us first.</p></span><span class="ab3-tab__prog"><i></i></span></button><button class="ab3-tab" type="button" role="tab"><span class="ab3-tab__n">02</span><span><b>One person you can always reach</b><p>You get one point of contact who knows your product, and the engineers who build it join the calls.</p></span><span class="ab3-tab__prog"><i></i></span></button><button class="ab3-tab" type="button" role="tab"><span class="ab3-tab__n">03</span><span><b>Your repo and your tools from day one</b><p>We work in your repository, your tracker and your sprint board, and follow your code review rules.</p></span><span class="ab3-tab__prog"><i></i></span></button><button class="ab3-tab" type="button" role="tab"><span class="ab3-tab__n">04</span><span><b>Same-day answers in US hours</b><p>Our working day overlaps with US and Canadian hours, so questions don’t wait overnight.</p></span><span class="ab3-tab__prog"><i></i></span></button><button class="ab3-tab" type="button" role="tab"><span class="ab3-tab__n">05</span><span><b>You own the code from the first commit</b><p>Everything lives in your accounts. When you want to take it in-house, the handover is documented and clean.</p></span><span class="ab3-tab__prog"><i></i></span></button><button class="ab3-tab" type="button" role="tab"><span class="ab3-tab__n">06</span><span><b>We tell you when not to build</b><p>If you don’t need AI, a bigger team or us at all, we will say so on the first call.</p></span><span class="ab3-tab__prog"><i></i></span></button></div>
+      <div class="ab3-stage" data-reveal><div class="ab3-win" style="flex:1;display:flex;flex-direction:column" aria-hidden="true"><div class="ab3-win__bar"><i></i><i></i><i></i><span>Devsynth · How we work</span><em>Live</em></div><div class="ab3-panes"><div class="ab3-pane" role="tabpanel"><div class="ab3-call"><div class="ab3-call__share ab3-in"><em>REC</em><div class="ab3-mock"><i></i><i style="width:70%"></i><i style="width:55%"></i><div class="ab3-mock__chart"></div></div><small>Sharing: staging.your-app.com</small></div>
+  <div class="ab3-call__tile is-talk ab3-in"><span class="ab3-av">PM</span><small>Devsynth PM</small></div><div class="ab3-call__tile ab3-in"><span class="ab3-av ab3-av--g">YOU</span><small>You</small></div></div><p class="ab3-cap">Every Friday: a live demo of what shipped this week.</p></div><div class="ab3-pane" role="tabpanel"><div class="ab3-chat is-typed"><div class="ab3-msg ab3-msg--them ab3-in"><small>You</small>Can we move the launch to Thursday? Investors want to see it.</div>
+  <div class="ab3-typing"><b></b><b></b><b></b></div>
+  <div class="ab3-msg ab3-msg--us ab3-msg--late"><small>Your Devsynth PM</small>Yes. I checked with the team: we’ll move the export feature to next week and ship the rest Thursday. Plan is in the sprint board.</div></div><p class="ab3-cap">A real person who knows your product, not a ticket queue.</p></div><div class="ab3-pane" role="tabpanel"><div class="ab3-git"><div class="ab3-git__repo ab3-in">your-company / app<span>Your GitHub</span></div><ul><li class="ab3-in"><code>a3f9c1</code><span>feat: wallet top-up flow</span><em>merged</em></li><li class="ab3-in"><code>9be27d</code><span>fix: retry failed payouts</span><em>merged</em></li><li class="ab3-in"><code>41c0aa</code><span>test: checkout edge cases</span><em>merged</em></li><li class="ab3-in"><code>e07f13</code><span>docs: handover notes</span><em>merged</em></li></ul></div><p class="ab3-cap">Every commit lands in your repository, reviewed your way.</p></div><div class="ab3-pane" role="tabpanel"><div class="ab3-invite"><div class="ab3-invite__date ab3-in"><small>MON–FRI</small><b>9:30</b><span>AM ET</span></div>
+  <div class="ab3-invite__body ab3-in"><b>Daily standup</b><span>Your Slack huddle · 15 min</span>
+  <div class="ab3-invite__who"><span class="ab3-av ab3-av--g">YOU</span><span class="ab3-av">PM</span><span class="ab3-av">DS</span><span class="ab3-av">DS</span></div></div>
+  <div class="ab3-invite__rsvp ab3-in"><span>Devsynth team</span><em>Accepted</em></div></div><p class="ab3-cap">We join your standups in your time zone. <span class="dsh-todo">Ali: confirm the overlap hours we promise</span></p></div><div class="ab3-pane" role="tabpanel"><div class="ab3-own"><div class="ab3-own__row ab3-in"><div>your-company/app<small>Repository</small></div><span class="ab3-own__tag">Owner: you</span></div>
+  <div class="ab3-own__row ab3-in"><div>Devsynth engineers<small>Access</small></div><span class="ab3-own__tag ab3-own__tag--b">Collaborators</span></div>
+  <div class="ab3-own__row ab3-in"><div>Cloud, domains, app stores<small>Accounts</small></div><span class="ab3-own__tag">In your name</span></div>
+  <div class="ab3-own__row ab3-in"><div>Handover docs<small>Always up to date</small></div><span class="ab3-switch" aria-hidden="true"></span></div></div><p class="ab3-cap">Your code, your accounts. We’re guests, not landlords.</p></div><div class="ab3-pane" role="tabpanel"><div class="ab3-chat is-typed"><div class="ab3-msg ab3-msg--them ab3-in"><small>You</small>Should we add an AI chatbot before launch?</div>
+  <div class="ab3-typing"><b></b><b></b><b></b></div>
+  <div class="ab3-msg ab3-msg--us ab3-msg--late"><small>Devsynth</small>Honestly, not yet. A good search on your help pages will answer most of these questions. Let’s launch, see what users ask, then decide.</div></div><p class="ab3-cap">Sometimes the best advice is a smaller build.</p></div></div></div></div>
+    </div>
+  </div>
+</section><section class="dsh-sec">
+  <div class="dsh-wrap">
+    <div class="ab3-head ab3-head--row" data-reveal><div><span class="dsh-eyebrow">THE PROCESS</span><h2>From first call to <span class="dsh-grad">launch and beyond.</span></h2></div>
+      <p class="dsh-lead">Four steps, the same on every project. You always know what happens next.</p></div>
+    <div class="ab3-steps" data-ab3-steps><span class="ab3-steps__track" aria-hidden="true"><i></i></span>
+      <article class="ab3-step"><b>01</b><h3>Talk</h3><p>A 30-minute call about your product, your users and your timeline.</p></article><article class="ab3-step"><b>02</b><h3>Plan</h3><p>A 1 to 2 week discovery for new builds, or a paid 2-week trial sprint for teams.</p></article><article class="ab3-step"><b>03</b><h3>Build</h3><p>Senior engineers ship in milestones, with a weekly demo of working software.</p></article><article class="ab3-step"><b>04</b><h3>Grow</h3><p>We stay on for support and new features, or hand over cleanly to your team.</p></article>
+    </div>
+  </div>
+</section><section class="dsh-sec ab3-teamsec">
+  <div class="dsh-wrap">
+    <div class="ab3-team">
+      <div data-reveal>
+        <span class="dsh-eyebrow">THE TEAM</span>
+        <h2>Senior people, <span class="dsh-grad">close to the work.</span></h2>
+        <p class="dsh-lead">Our engineers and designers work from Karachi, the UAE and Saskatoon, with a US office in St. Petersburg, FL. The people you meet on the first call stay involved in your product.</p>
+        <div class="ab3-inds"><span>EV &amp; mobility</span><span>Fintech &amp; crypto</span><span>Healthcare</span><span>Education</span><span>E-commerce</span><span>B2B SaaS &amp; sales</span><span>Food delivery</span><span>Fitness &amp; wellness</span></div>
+      </div>
+      <div class="ab3-win" data-reveal aria-label="Where our team is right now">
+          <div class="ab3-win__bar"><i></i><i></i><i></i><span>Devsynth · Our team today</span><em>Live</em></div>
+          <div class="ab3-rib" data-ribbon>
+            <div class="ab3-rib__track">
+              <div class="ab3-rib__row" data-tz="Asia/Karachi"><div><b>Karachi</b><small>Engineering and design</small></div><div class="ab3-rib__bar"><i></i></div><time>--:--</time></div><div class="ab3-rib__row" data-tz="Asia/Dubai"><div><b>UAE</b><small>Engineering</small></div><div class="ab3-rib__bar"><i></i></div><time>--:--</time></div><div class="ab3-rib__row" data-tz="America/Regina"><div><b>Saskatoon</b><small>Engineering</small></div><div class="ab3-rib__bar"><i></i></div><time>--:--</time></div><div class="ab3-rib__row" data-tz="America/New_York"><div><b>St. Petersburg, FL</b><small>US office · US Eastern</small></div><div class="ab3-rib__bar"><i></i></div><time>--:--</time></div>
+              <span class="ab3-rib__now" aria-hidden="true"></span>
+            </div>
+            <div class="ab3-rib__axis" aria-hidden="true"><span>00:00 UTC</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+            <div class="ab3-rib__legend"><span>9 am to 6 pm local time</span></div>
+          </div>
+        </div>
+    </div>
+    <div class="ab3-people">
+      <article class="ab3-person" data-reveal><span class="ab3-av">AH</span><b>Ali Hunain</b><small>Co-founder</small><p>7+ years building full-stack products. Previously a senior software engineer at Careem and Momos.</p><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn →</a> <span class="dsh-todo">photo + profile URL</span></article>
+      <article class="ab3-person ab3-person--todo" data-reveal><span class="ab3-av">+</span><b>Team member</b><small>Role</small><p>Placeholder: add name, role, one line and photo.</p></article>
+      <article class="ab3-person ab3-person--todo" data-reveal><span class="ab3-av">+</span><b>Team member</b><small>Role</small><p>Placeholder: add name, role, one line and photo.</p></article>
+    </div>
+  </div>
+</section><section class="dsh-sec dsh-faq" id="faq" aria-labelledby="dsh-faq-h">
+  <div class="dsh-wrap dsh-faq__grid" data-faq>
+    <div class="dsh-faq__left" data-reveal>
+      <span class="dsh-eyebrow">GOOD TO KNOW</span>
+      <h2 id="dsh-faq-h">Questions we <span class="dsh-grad">often get.</span></h2>
+      <p class="dsh-lead">Tap a question to see the answer. NDA and time zone answers: <span class="dsh-todo">Ali: confirm</span></p>
+      <div class="dsh-faq__chips"><button class="dsh-faq__chip" type="button" data-i="0">Who owns the code and designs?</button><button class="dsh-faq__chip" type="button" data-i="1">Where is your team?</button><button class="dsh-faq__chip" type="button" data-i="2">Do you work in our time zone?</button><button class="dsh-faq__chip" type="button" data-i="3">Can we start small?</button><button class="dsh-faq__chip" type="button" data-i="4">Will you sign an NDA?</button><button class="dsh-faq__chip" type="button" data-i="5">What kind of companies do you work with?</button></div>
+      <dl class="dsh-faq__all"><dt>Who owns the code and designs?</dt><dd>You do, from the first commit. Everything is kept in your repositories and accounts, and you get a documented handover whenever you want one.</dd><dt>Where is your team?</dt><dd>Our engineers and designers work from Karachi (Pakistan), the UAE and Saskatoon (Canada), and we have a US office in St. Petersburg, Florida.</dd><dt>Do you work in our time zone?</dt><dd>Our working day overlaps with US and Canadian business hours, so we join your standups and answer questions the same day.</dd><dt>Can we start small?</dt><dd>Yes. New products start with a 1 to 2 week discovery, and teams can start with a paid 2-week trial sprint before committing to more.</dd><dt>Will you sign an NDA?</dt><dd>Yes, we can sign your NDA before the first detailed call.</dd><dt>What kind of companies do you work with?</dt><dd>Mostly founders, CTOs and product teams at B2B SaaS companies in the US and Canada, usually between 2 and 200 people.</dd></dl>
+    </div>
+    <div class="dsh-faq__win" data-reveal aria-hidden="true">
+      <div class="dsh-faq__bar"><i></i><i></i><i></i><span>Devsynth · FAQ</span><em>Online</em></div>
+      <div class="dsh-faq__log"></div>
+      <div class="dsh-faq__foot">Have another question?<a class="dsh-faq__cta" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener" tabindex="-1">Book a call</a></div>
+    </div>
+  </div>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who owns the code and designs?", "acceptedAnswer": {"@type": "Answer", "text": "You do, from the first commit. Everything is kept in your repositories and accounts, and you get a documented handover whenever you want one."}}, {"@type": "Question", "name": "Where is your team?", "acceptedAnswer": {"@type": "Answer", "text": "Our engineers and designers work from Karachi (Pakistan), the UAE and Saskatoon (Canada), and we have a US office in St. Petersburg, Florida."}}, {"@type": "Question", "name": "Do you work in our time zone?", "acceptedAnswer": {"@type": "Answer", "text": "Our working day overlaps with US and Canadian business hours, so we join your standups and answer questions the same day."}}, {"@type": "Question", "name": "Can we start small?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. New products start with a 1 to 2 week discovery, and teams can start with a paid 2-week trial sprint before committing to more."}}, {"@type": "Question", "name": "Will you sign an NDA?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we can sign your NDA before the first detailed call."}}, {"@type": "Question", "name": "What kind of companies do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly founders, CTOs and product teams at B2B SaaS companies in the US and Canada, usually between 2 and 200 people."}}]}</script>
+</section><section class="dsh-cta" aria-labelledby="dsh-cta-h">
+  <span class="dsh-cta__shade" aria-hidden="true"></span>
+  <div class="dsh-cta__inner" data-reveal>
+    <div class="dsh-cta__copy"><span class="dsh-eyebrow">LET'S TALK</span><h2 id="dsh-cta-h">Have a product to build? <br>Let’s do it right.</h2><p>Book a 30-minute call with our team. We’ll look at your idea, recommend the best way to work together and give you a clear next step.</p></div>
+    <div class="dsh-cta__btns"><a class="dsh-btn dsh-cta__primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call →</a><a class="dsh-btn dsh-cta__ghost" href="case-studies.html">See our work</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER: new design. Hamza: rebuild WordPress footer template 34817 to match. ===== -->
+<footer class="dsh-footer">
+  <div class="dsh-wrap">
+    <div class="dsh-footer__top">
+      <div class="dsh-footer__brand"><img src="assets/img/devsynth-logo-footer.png" alt="Devsynth" width="220" height="113" loading="lazy"><p>Technology. Design. Engineering. Together.</p>
+        <ul class="dsh-details"><li><a href="mailto:info@devsynth.us">info@devsynth.us</a></li><li><a href="tel:+17274054545">+1 (727) 405-4545</a></li><li>St. Petersburg, FL 33702, United States</li><li><a href="https://www.linkedin.com/company/devsynth-us/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div class="dsh-footer__col"><h4>RESOURCES</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div><div class="dsh-footer__col"><h4>SERVICES</h4><ul><li><a href="/services/custom-web-application-development/">Web Apps</a></li><li><a href="/services/cross-platform-mobile-apps/">Mobile Apps</a></li><li><a href="/services/customer-and-admin-portals/">Portals</a></li><li><a href="/services/saas-product-development/">SaaS Products</a></li><li><a href="service-mvp.html">MVP Development</a></li><li><a href="service-ai-features.html">Machine Learning</a></li><li><a href="/services/api-development-and-integrations/">API Integration</a></li><li><a href="/services/cloud-devops-and-support/">Cloud &amp; DevOps</a></li><li><a href="/services/payment-and-subscription-systems/">Payment Systems</a></li><li><a href="/services/data-engineering-and-dashboards/">Data &amp; Dashboards</a></li><li><a href="/services/ui-and-ux-design/">UI/UX Design</a></li><li><a href="/services/qa-and-software-testing/">QA Testing</a></li></ul></div><div class="dsh-footer__col"><h4>CASE STUDIES</h4><ul><li><a href="case-study-evdc.html">EVDC</a></li><li><a href="/case-studies/larimar-training/">Larimar Training</a></li><li><a href="/case-studies/al-qand-exchange-app/">Al Qand Exchange</a></li><li><a href="/case-studies/proud-profits/">Proud Profits</a></li><li><a href="/case-studies/outsorcy-sdr-platform/">Outsorcy SDR Platform</a></li><li><a href="/case-studies/chalk-performance-training/">Chalk Performance Training</a></li></ul></div>
+    </div>
+    <div class="dsh-footer__bottom"><span>© 2026 Devsynth. All rights reserved.</span><span>BUILDING DIGITAL PRODUCTS FOR WHAT’S NEXT.</span></div>
+  </div>
+</footer>
+
+</div>
+<script src="assets/js/about3.js?v=3" defer></script>
+<script src="assets/js/site.js?v=32"></script>
+
+</body>
+</html>

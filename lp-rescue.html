@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finish Your Stalled Software Build | Devsynth</title>
+<meta name="description" content="Your last team left the product half-built? A 1 to 2 week discovery, a written plan, then a fixed price to finish. Weekly demos, you own the code.">
+<!--
+  DEVSYNTH LANDING PAGE: RESCUE A STALLED BUILD (/lp/rescue): HTML draft for Hamza.
+  Same nav, footer, theme switch and site.css / site.js as the home page; page styles in assets/css/pages.css.
+-->
+<script>
+  // runs before the page paints: JS flag for reveal animations, and the saved light/dark choice (no flash of the wrong theme)
+  document.documentElement.classList.add('js');
+  try { var dsTheme = localStorage.getItem('ds-theme'); if (dsTheme === 'dark' || dsTheme === 'light') document.documentElement.setAttribute('data-theme', dsTheme); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=125">
+<link rel="stylesheet" href="assets/css/pages.css?v=1">
+<link rel="stylesheet" href="assets/css/lp.css?v=1">
+</head>
+<body>
+<div class="dsh dsh-lp">
+<!-- ===== HEADER: new nav bar. Already built on staging in WordPress header template 34656. ===== -->
+<header class="dsh-header">
+  <div class="dsh-header__bar">
+    <a class="dsh-header__logo" href="index.html" aria-label="Devsynth home"><img class="dsh-logo--on-light" src="assets/img/devsynth-logo-dark.png" alt="Devsynth" width="640" height="160"><img class="dsh-logo--on-dark" src="assets/img/devsynth-logo-white.png" alt="" width="640" height="159"></a>
+    <nav class="dsh-header__nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a></nav>
+    <button class="dsh-theme" type="button" role="switch" aria-checked="false" aria-label="Dark theme" data-theme-toggle>
+      <span class="dsh-theme__knob" aria-hidden="true"></span>
+      <span class="dsh-theme__i dsh-theme__i--sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span>
+      <span class="dsh-theme__i dsh-theme__i--moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+    </button>
+    <a class="dsh-btn dsh-btn--primary dsh-btn--sm dsh-header__cta" href="#book" data-cta="header">Book a call</a>
+    <button class="dsh-header__toggle" type="button" aria-expanded="false" aria-controls="dsh-mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="dsh-header__mnav" id="dsh-mnav" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a></nav>
+</header>
+
+<main id="main">
+<!-- ===== LINKEDIN AD LANDING PAGE: RESCUE A STALLED BUILD (/lp/rescue). Hamza: noindex, no menu, every button scrolls to #book (Calendly loads there). Calendly question for this page: "What state is the product in?" ===== -->
+<section class="dsh-ph">
+  <div class="dsh-wrap">
+    <div class="dsh-ph__grid">
+      <div data-reveal>
+        <span class="dsh-eyebrow">STALLED BUILD?</span>
+        <h1>Finish the product your last team <span class="dsh-grad">left half-built.</span></h1>
+        <p class="dsh-lead">We start with a 1 to 2 week discovery. We go through your code and backlog, tell you what to keep and what to fix, and then give you a fixed price to finish.</p>
+        <div class="dsh-ph__ctas"><a class="dsh-btn dsh-btn--primary" href="#book" data-cta="hero">Book a 30-minute call →</a></div>
+        <p class="dsh-lp-under"><b>Starts with a 1 to 2 week discovery.</b> Weekly demos. You own the code.</p>
+      </div>
+      <div class="dsh-hpanel" data-reveal><div class="dsh-hpanel__bar" aria-hidden="true"><i></i><i></i><i></i></div><h3>What discovery covers</h3><ol><li><div><b>Access and review</b>Your repo, docs, hosting and backlog.</div></li><li><div><b>Written findings</b>What to keep, what to fix and what to rebuild.</div></li><li><div><b>A plan and a fixed price</b>To finish the product, before you commit.</div></li></ol></div>
+    </div>
+  </div>
+</section><section class="dsh-blk" style="border-top:0;padding:0 0 20px"><div class="dsh-wrap"><ul class="dsh-lp-bar" data-reveal><li><b>20+</b>products delivered</li><li><b>8</b>industries</li><li><b>Weekly</b>demos so you always see progress</li><li><b>100%</b>of the code stays yours</li></ul></div></section><section class="dsh-blk dsh-blk--alt"><div class="dsh-wrap"><div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">SOUND FAMILIAR?</span><h2>It happens more often than you’d think.</h2><p class="dsh-lead">None of this means the product is lost. It usually means it needs a clear plan.</p></div><ul class="dsh-lp-sym">
+<li data-reveal>Deadlines keep slipping, and nobody can say when it will be done.</li>
+<li data-reveal>Nobody can explain how parts of the code work.</li>
+<li data-reveal>Bugs you fixed last month are back.</li>
+<li data-reveal>The old team is gone, or slow to reply.</li></ul></div></section><section class="dsh-blk"><div class="dsh-wrap"><div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">HOW IT WORKS</span><h2>A fixed price after discovery, not before.</h2><p class="dsh-lead">Nobody can price your project honestly without looking at the code first. So we look, then quote.</p></div><ol class="dsh-steps"><li data-reveal><b>01</b><h3>Access</h3><p>You share the repo, docs and hosting. We sign an NDA first if you want.</p></li><li data-reveal><b>02</b><h3>Review</h3><p>We go through the code, architecture and backlog.</p></li><li data-reveal><b>03</b><h3>Findings</h3><p>A written report: what to keep, what to fix and what to rebuild.</p></li><li data-reveal><b>04</b><h3>Fixed price to finish</h3><p>A plan with milestones and one price. Then weekly demos until it’s live.</p></li></ol><div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:40px" data-reveal><a class="dsh-btn dsh-btn--primary" href="#book" data-cta="mid">Book a 30-minute call →</a><span class="dsh-lp-under" style="margin:0">A 1 to 2 week discovery, then a fixed price.</span></div></div></section><section class="dsh-blk dsh-blk--alt"><div class="dsh-wrap"><div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">EVERY WEEK</span><h2>You’ll never wonder what’s happening again.</h2></div><ul class="dsh-commit dsh-commit--3">
+<li data-reveal><b>A demo</b><span>Working software you can click through, not a status email.</span></li>
+<li data-reveal><b>A short update</b><span>What’s done, what’s next and anything that needs your call.</span></li>
+<li data-reveal><b>Code in your repo</b><span>Everything we write is yours, from the first commit.</span></li></ul></div></section><section class="dsh-blk"><div class="dsh-wrap"><div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">PROOF</span><h2>Built and still run by our team.</h2><p class="dsh-lead"><span class="dsh-todo">Ali: swap in a real rescue story when one is approved</span></p></div><div class="dsh-work"><article class="dsh-wc dsh-wc--feat" data-tags="mobile ai payments mobility" data-reveal><div class="dsh-wc__img" style="--tint:#DDF7E3;--tint-d:#0F2A1B"><img class="" src="assets/img/work/evdc.webp" alt="EVDC app screens" loading="lazy"></div><div class="dsh-wc__body"><span class="dsh-wc__client">EVDC · Featured</span><h3>Driver and owner charging apps, live across Europe</h3><ul class="dsh-stats"><li><b>1.2M+</b><span>charging sessions in production</span></li><li><b class="dsh-stats__w">2 apps</b><span>driver app and EVDC Earn for charger owners</span></li></ul><div class="dsh-tags"><span>Mobile apps</span><span>Payments</span><span>AI chatbot</span><span>OCPP/OCPI</span></div></div><a class="dsh-card__link" href="case-study-evdc.html" aria-label="Read the EVDC case study"></a><span class="dsh-wc__go" aria-hidden="true">→</span></article></div></div></section><section class="dsh-blk dsh-blk--alt"><div class="dsh-wrap"><div class="dsh-split"><div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">WHO YOU’LL TALK TO</span><h2>A founder who reads code.</h2></div><div class="dsh-lp-person" data-reveal><span class="dsh-lp-person__ph" aria-hidden="true">AH</span><div><b>Ali Hunain</b><small>Co-founder, Devsynth</small>
+<p>You’ll talk to Ali on the first call. He has 7+ years of building full-stack products and leads engineering on our client work. <span class="dsh-todo">Ali: photo + confirm bio line</span></p>
+<a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">Ali on LinkedIn → <span class="dsh-todo">add profile URL</span></a></div></div></div></div></section><section class="dsh-blk"><div class="dsh-wrap"><div class="dsh-split"><div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">FAQ</span><h2>Before you book.</h2></div><div class="dsh-faqs"><details class="dsh-q" open><summary>Will you rewrite everything?<span aria-hidden="true"></span></summary><p>Not unless it’s really needed. It depends on what discovery finds. Often most of the code can stay, and we fix the parts that keep breaking.</p></details><details class="dsh-q"><summary>What access do you need?<span aria-hidden="true"></span></summary><p>Read access to your code repository, any docs, and your hosting or cloud account. We tell you exactly what before we start.</p></details><details class="dsh-q"><summary>Do you sign an NDA?<span aria-hidden="true"></span></summary><p>Yes, before you share your code. <span class="dsh-todo">Ali: confirm</span></p></details><details class="dsh-q"><summary>Who owns the code?<span aria-hidden="true"></span></summary><p>You do, including everything we write.</p></details><details class="dsh-q"><summary>Where is the team?<span aria-hidden="true"></span></summary><p>Our engineering team is in Pakistan and our US office is in St. Petersburg, Florida. <span class="dsh-todo">Ali: add overlap hours</span></p></details><details class="dsh-q"><summary>Why no prices on this page?<span aria-hidden="true"></span></summary><p>We can’t price a half-built product honestly without reviewing it. You get a fixed price after discovery.</p></details></div></div></div></section><section class="dsh-blk dsh-blk--alt" id="book">
+  <div class="dsh-wrap dsh-lp-book">
+    <div data-reveal>
+      <span class="dsh-eyebrow">BOOK A CALL</span>
+      <h2>Pick a time that suits you.</h2>
+      <p class="dsh-lead">30 minutes on video. No deck, no prep needed. You’ll leave with a clear next step, even if it isn’t us.</p>
+      <ul class="dsh-checks" style="margin-top:26px"><li>We’ll ask one question when you book: <b>What state is the product in?</b></li><li>Options: Not launched, Launched but unstable, Launched, need new features</li><li>Happy to sign an NDA before we talk <span class="dsh-todo">Ali: confirm</span></li></ul>
+    </div>
+    <div class="dsh-lp-cal" data-cal="https://calendly.com/ali-devsynth/30min" data-reveal>
+      <div class="dsh-lp-cal__ph"><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><b>Book a 30-minute call</b><span>The calendar loads here.</span><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Open the calendar →</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="dsh-lp-foot"><div class="dsh-wrap"><span>© 2026 Devsynth · US office: St. Petersburg, FL 33702 · Engineering team in Pakistan</span><span><a href="privacy.html">Privacy Policy</a></span></div></footer>
+<div class="dsh-lp-sticky"><span>30-minute call, no prep needed</span><a class="dsh-btn dsh-btn--primary" href="#book" data-cta="sticky">Book a call</a></div>
+
+</div>
+<script src="assets/js/pages.js?v=1" defer></script>
+<script src="assets/js/lp.js?v=1" defer></script>
+<script src="assets/js/site.js?v=32"></script>
+
+</body>
+</html>

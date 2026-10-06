@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EVDC Case Study: EV Charging Apps | Devsynth</title>
+<meta name="description" content="How Devsynth built the EVDC driver app and EVDC Earn owner app: OCPP/OCPI roaming, card and crypto payments and an AI support chatbot. 1.2M+ charging sessions across Europe.">
+<!--
+  DEVSYNTH CASE STUDY: EVDC: HTML draft for Hamza.
+  Same nav, footer, theme switch and site.css / site.js as the home page; page styles in assets/css/pages.css.
+-->
+<script>
+  // runs before the page paints: JS flag for reveal animations, and the saved light/dark choice (no flash of the wrong theme)
+  document.documentElement.classList.add('js');
+  try { var dsTheme = localStorage.getItem('ds-theme'); if (dsTheme === 'dark' || dsTheme === 'light') document.documentElement.setAttribute('data-theme', dsTheme); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=125">
+<link rel="stylesheet" href="assets/css/pages.css?v=1">
+</head>
+<body>
+<div class="dsh">
+<!-- ===== HEADER: new nav bar. Already built on staging in WordPress header template 34656. ===== -->
+<header class="dsh-header">
+  <div class="dsh-header__bar">
+    <a class="dsh-header__logo" href="index.html" aria-label="Devsynth home"><img class="dsh-logo--on-light" src="assets/img/devsynth-logo-dark.png" alt="Devsynth" width="640" height="160"><img class="dsh-logo--on-dark" src="assets/img/devsynth-logo-white.png" alt="" width="640" height="159"></a>
+    <nav class="dsh-header__nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a aria-current="page" href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a></nav>
+    <button class="dsh-theme" type="button" role="switch" aria-checked="false" aria-label="Dark theme" data-theme-toggle>
+      <span class="dsh-theme__knob" aria-hidden="true"></span>
+      <span class="dsh-theme__i dsh-theme__i--sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span>
+      <span class="dsh-theme__i dsh-theme__i--moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+    </button>
+    <a class="dsh-btn dsh-btn--primary dsh-btn--sm dsh-header__cta" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a>
+    <button class="dsh-header__toggle" type="button" aria-expanded="false" aria-controls="dsh-mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="dsh-header__mnav" id="dsh-mnav" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a></nav>
+</header>
+
+<main id="main">
+<!-- ===== CASE STUDY: EVDC. Same section order on every case study: hero, results, facts, quote, story (client, challenge, built, decisions, AI, stack), screens, related, CTA. ===== -->
+<section class="dsh-ph dsh-cs-hero">
+  <div class="dsh-wrap">
+    <nav class="dsh-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="case-studies.html">Our Projects</a><span aria-hidden="true">/</span><span aria-current="page">EVDC</span></nav>
+    <div class="dsh-ph__grid">
+      <div data-reveal>
+        <span class="dsh-cs-client"><i aria-hidden="true"></i>EVDC · EV CHARGING · LIVE</span>
+        <h1>Two EV charging apps behind <span class="dsh-grad">1.2M+ charging sessions</span> across Europe.</h1>
+        <p class="dsh-lead">EVDC runs a DC fast-charging network. We built the app drivers use to find, start and pay for a charge, and EVDC Earn, the app charger owners use to run their stations and track revenue.</p>
+        <div class="dsh-tags"><span>Mobile apps</span><span>Payments</span><span>AI support chatbot</span><span>OCPP/OCPI roaming</span><span>AWS</span></div>
+        <div class="dsh-ph__ctas"><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call →</a><a class="dsh-btn dsh-btn--ghost" href="https://evdc.network" target="_blank" rel="noopener">Visit evdc.network</a></div>
+      </div>
+      <div class="dsh-cs-hero__img" style="--tint:#2FD15A" data-reveal><img src="assets/img/work/evdc.webp" alt="EVDC driver app: login and start charging screens" width="1600" height="1067"></div>
+    </div>
+  </div>
+</section>
+
+<section class="dsh-cs-results">
+  <div class="dsh-wrap">
+    <ul class="dsh-stats" data-reveal>
+      <li><b>1.2M+</b><span>charging sessions in production</span></li>
+      <li><b>~374K</b><span>charging sessions a year</span></li>
+      <li><b class="dsh-stats__w">2 apps</b><span>driver app and EVDC Earn for charger owners</span></li>
+      <li><b class="dsh-stats__w">Live in Europe</b><span>on iOS and Android</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="dsh-blk" style="border-top:0;padding-top:40px">
+  <div class="dsh-wrap">
+    <dl class="dsh-facts" data-reveal>
+      <div><dt>Client</dt><dd>EVDC (evdc.network)</dd></div>
+      <div><dt>Industry</dt><dd>EV charging</dd></div>
+      <div><dt>Region</dt><dd>Europe</dd></div>
+      <div><dt>What we did</dt><dd>Mobile apps, payments, AI support chatbot, roaming integration, cloud</dd></div>
+      <div><dt>Platforms</dt><dd>iOS, Android, cloud back end</dd></div>
+      <div><dt>Timeline and team</dt><dd><span class="dsh-todo">to confirm: dates and team roles</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="dsh-blk" style="border-top:0;padding-top:0">
+  <div class="dsh-wrap">
+    <figure class="dsh-quote" data-reveal>
+      <span class="dsh-quote__av" aria-hidden="true">E</span>
+      <blockquote style="margin:0"><p>[Quote from the EVDC team on working with Devsynth.]</p>
+      <cite><b>[Full name]</b>, [Job title], EVDC <span class="dsh-todo">needs written approval</span></cite></blockquote>
+    </figure>
+  </div>
+</section>
+
+<section class="dsh-blk">
+  <div class="dsh-wrap dsh-article">
+    <nav class="dsh-toc" data-toc aria-label="On this page"><b>On this page</b><a href="#client">The client</a><a href="#challenge">The challenge</a><a href="#built">What we built</a><a href="#decisions">Key decisions</a><a href="#ai">The AI support chatbot</a><a href="#stack">Tech stack</a><a href="#screens">Screens</a><div class="dsh-toc__cta"><strong>Building a two-sided app?</strong>Talk to the team that built EVDC.<a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a></div></nav>
+    <div class="dsh-prose">
+      <h2 id="client">The client</h2>
+      <p>EVDC is an EV DC fast-charging network. Drivers use it to charge on the go, and charger owners connect their stations to the network to earn from them. Most sessions today happen in Italy, with the network live across Europe.</p>
+
+      <h2 id="challenge">The challenge</h2>
+      <p>EVDC needed software for two very different groups of people, on top of charging hardware it doesn’t control.</p>
+      <ul>
+        <li><strong>Two users, two jobs.</strong> Drivers want to find a free charger, start it and pay in a few taps. Owners want to run their stations, set them public or private, and see what they earn.</li>
+        <li><strong>Mixed hardware and networks.</strong> Chargers come from different vendors, and drivers expect to charge on partner networks too.</li>
+        <li><strong>More than one way to pay.</strong> Drivers pay by card or with EVDC’s own crypto token, and some just want to charge as a guest.</li>
+      </ul>
+
+      <h2 id="built">What we built</h2>
+      <ul class="dsh-built">
+        <li><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><div><h3>Driver app</h3><p>Station locator with real-time availability, one-tap charging, guest accounts and wallet top-up, on iOS and Android.</p></div></li>
+        <li><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><h3>EVDC Earn for charger owners</h3><p>A separate app for owners: public or private charging modes, real-time analytics and revenue management.</p></div></li>
+        <li><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7 3 12l5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span><div><h3>OCPP back end and OCPI roaming</h3><p>OCPP-compliant, so it works across hardware vendors. Roaming through Hubject and ENAPI over OCPI lets drivers charge on partner networks.</p></div></li>
+        <li><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="13" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></svg></span><div><h3>Card and crypto payments</h3><p>Card payments through Stripe alongside the EVDC crypto token, in the same checkout.</p></div></li>
+        <li><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><rect x="7" y="7" width="10" height="10" rx="2.5"/><path d="M10 10h4v4h-4z"/></svg></span><div><h3>AI support chatbot</h3><p>A multilingual assistant that answers driver questions using live charger data. More on it below.</p></div></li>
+        <li><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 10a4 4 0 0 1 0 8z"/></svg></span><div><h3>Cloud and cost</h3><p>Runs on AWS ECS Fargate. We also worked on bringing AWS costs down as usage grew.</p></div></li>
+      </ul>
+
+      <h2 id="decisions">Key decisions</h2>
+      <p>Two calls shaped the product. <span class="dsh-todo">Ali: confirm or replace these with the real reasoning from the team</span></p>
+      <h3>Two apps, not one app with roles</h3>
+      <p>Drivers and owners open the app for different reasons and at different moments. Keeping them as separate apps let each one stay simple, and let us ship owner features without touching the driver flow.</p>
+      <h3>Standards first for hardware and roaming</h3>
+      <p>Building on OCPP and OCPI, instead of custom links to each charger brand or network, meant new hardware and new roaming partners could be added without rebuilding the app.</p>
+
+      <h2 id="ai">The AI support chatbot</h2>
+      <p>The chatbot uses retrieval-augmented generation (RAG) and is connected to live OCPP data, so it can answer questions about a specific charger or session rather than giving generic help. It speaks more than one language, which matters for a network that runs across Europe.</p>
+      <p class="dsh-note"><b>To add when confirmed</b>What the bot hands to a human, how we test answers, and one quality number (for example, the share of questions it resolves on its own).</p>
+
+      <h2 id="stack">Tech stack</h2>
+      <div class="dsh-stack">
+        <div><b>Mobile</b><div class="dsh-tags"><span>React Native</span><span>iOS</span><span>Android</span></div></div>
+        <div><b>Back end</b><div class="dsh-tags"><span>Node.js</span><span>TypeScript</span></div></div>
+        <div><b>Charging and roaming</b><div class="dsh-tags"><span>OCPP</span><span>OCPI</span><span>Hubject</span><span>ENAPI</span></div></div>
+        <div><b>Payments and cloud</b><div class="dsh-tags"><span>Stripe</span><span>Crypto token</span><span>AWS ECS Fargate</span></div></div>
+      </div>
+
+      <h2 id="screens">Screens</h2>
+      <div class="dsh-gallery">
+        <figure style="--tint:#2FD15A"><img src="assets/img/work/evdc.webp" alt="EVDC driver app login and start charging screens" loading="lazy"><figcaption>Driver app: sign in and start a charge</figcaption></figure>
+        <figure style="--tint:#0F172A"><img src="assets/img/work/evdc-earn.jpg" alt="EVDC Earn owner app dashboard, revenue and station screens" loading="lazy"><figcaption>EVDC Earn: revenue, sessions and stations</figcaption></figure>
+      </div>
+      <p>Get the apps: <a href="https://apps.apple.com/app/id1570309872" target="_blank" rel="noopener">EVDC on iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.network.evdc.app" target="_blank" rel="noopener">EVDC on Android</a>, <a href="https://apps.apple.com/app/id6754324206" target="_blank" rel="noopener">EVDC Earn on iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.evdcpro" target="_blank" rel="noopener">EVDC Earn on Android</a>.</p>
+    </div>
+  </div>
+</section>
+<section class="dsh-blk dsh-blk--alt">
+  <div class="dsh-wrap">
+    <div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">RELATED WORK</span><h2>More work like this</h2></div>
+    <div class="dsh-work"><article class="dsh-wc" data-tags="mobile portal payments fintech" data-reveal><div class="dsh-wc__img" style="--tint:#E6EEFB;--tint-d:#13213A"><img class="" src="assets/img/work/al-qand.webp" alt="Al-Qand Exchange app screens" loading="lazy"></div><div class="dsh-wc__body"><span class="dsh-wc__client">Al-Qand Exchange</span><h3>Currency exchange requests with one-time-code and document checks, plus an admin portal</h3><div class="dsh-tags"><span>Mobile app</span><span>Admin portal</span><span>Verification</span></div></div><a class="dsh-card__link" href="/case-studies/al-qand-exchange-app/" aria-label="Read the Al-Qand Exchange case study"></a><span class="dsh-wc__go" aria-hidden="true">→</span></article><article class="dsh-wc" data-tags="saas portal ai sales" data-reveal><div class="dsh-wc__img" style="--tint:#EFEAFB;--tint-d:#1D1836"><img class="is-contain" src="assets/img/work/outsorcy-sdr.webp" alt="Sales Outsorcy app screens" loading="lazy"></div><div class="dsh-wc__body"><span class="dsh-wc__client">Sales Outsorcy</span><h3>SDR platform with a client portal, KPI tracking and AI lead scoring</h3><div class="dsh-tags"><span>SaaS</span><span>Client portal</span><span>AI lead scoring</span></div></div><a class="dsh-card__link" href="/case-studies/outsorcy-sdr-platform/" aria-label="Read the Sales Outsorcy case study"></a><span class="dsh-wc__go" aria-hidden="true">→</span></article></div>
+  </div>
+</section><section class="dsh-cta" aria-labelledby="dsh-cta-h">
+  <span class="dsh-cta__shade" aria-hidden="true"></span>
+  <div class="dsh-cta__inner" data-reveal>
+    <div class="dsh-cta__copy"><span class="dsh-eyebrow">LET'S TALK</span><h2 id="dsh-cta-h">Building a two-sided app <br>with payments?</h2><p>Book a 30-minute call with the team that built EVDC. We’ll look at your idea and give you a clear next step.</p></div>
+    <div class="dsh-cta__btns"><a class="dsh-btn dsh-cta__primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call →</a><a class="dsh-btn dsh-cta__ghost" href="case-studies.html">All case studies</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER: new design. Hamza: rebuild WordPress footer template 34817 to match. ===== -->
+<footer class="dsh-footer">
+  <div class="dsh-wrap">
+    <div class="dsh-footer__top">
+      <div class="dsh-footer__brand"><img src="assets/img/devsynth-logo-footer.png" alt="Devsynth" width="220" height="113" loading="lazy"><p>Technology. Design. Engineering. Together.</p>
+        <ul class="dsh-details"><li><a href="mailto:info@devsynth.us">info@devsynth.us</a></li><li><a href="tel:+17274054545">+1 (727) 405-4545</a></li><li>St. Petersburg, FL 33702, United States</li><li><a href="https://www.linkedin.com/company/devsynth-us/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div class="dsh-footer__col"><h4>RESOURCES</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div><div class="dsh-footer__col"><h4>SERVICES</h4><ul><li><a href="/services/custom-web-application-development/">Web Apps</a></li><li><a href="/services/cross-platform-mobile-apps/">Mobile Apps</a></li><li><a href="/services/customer-and-admin-portals/">Portals</a></li><li><a href="/services/saas-product-development/">SaaS Products</a></li><li><a href="service-mvp.html">MVP Development</a></li><li><a href="service-ai-features.html">Machine Learning</a></li><li><a href="/services/api-development-and-integrations/">API Integration</a></li><li><a href="/services/cloud-devops-and-support/">Cloud &amp; DevOps</a></li><li><a href="/services/payment-and-subscription-systems/">Payment Systems</a></li><li><a href="/services/data-engineering-and-dashboards/">Data &amp; Dashboards</a></li><li><a href="/services/ui-and-ux-design/">UI/UX Design</a></li><li><a href="/services/qa-and-software-testing/">QA Testing</a></li></ul></div><div class="dsh-footer__col"><h4>CASE STUDIES</h4><ul><li><a href="case-study-evdc.html">EVDC</a></li><li><a href="/case-studies/larimar-training/">Larimar Training</a></li><li><a href="/case-studies/al-qand-exchange-app/">Al Qand Exchange</a></li><li><a href="/case-studies/proud-profits/">Proud Profits</a></li><li><a href="/case-studies/outsorcy-sdr-platform/">Outsorcy SDR Platform</a></li><li><a href="/case-studies/chalk-performance-training/">Chalk Performance Training</a></li></ul></div>
+    </div>
+    <div class="dsh-footer__bottom"><span>© 2026 Devsynth. All rights reserved.</span><span>BUILDING DIGITAL PRODUCTS FOR WHAT’S NEXT.</span></div>
+  </div>
+</footer>
+
+</div>
+<script src="assets/js/pages.js?v=1" defer></script>
+<script src="assets/js/site.js?v=32"></script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Devsynth | Book a Call or Send a Message</title>
+<meta name="description" content="Tell Devsynth what you’re building. Book a 30-minute call or send a short message, and hear back from the engineers who would do the work.">
+<!--
+  DEVSYNTH CONTACT PAGE: HTML draft for Hamza.
+  Same nav, footer, theme switch and site.css / site.js as the home page; page styles in assets/css/pages.css.
+-->
+<script>
+  // runs before the page paints: JS flag for reveal animations, and the saved light/dark choice (no flash of the wrong theme)
+  document.documentElement.classList.add('js');
+  try { var dsTheme = localStorage.getItem('ds-theme'); if (dsTheme === 'dark' || dsTheme === 'light') document.documentElement.setAttribute('data-theme', dsTheme); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=125">
+<link rel="stylesheet" href="assets/css/pages.css?v=1">
+</head>
+<body>
+<div class="dsh">
+<!-- ===== HEADER: new nav bar. Already built on staging in WordPress header template 34656. ===== -->
+<header class="dsh-header">
+  <div class="dsh-header__bar">
+    <a class="dsh-header__logo" href="index.html" aria-label="Devsynth home"><img class="dsh-logo--on-light" src="assets/img/devsynth-logo-dark.png" alt="Devsynth" width="640" height="160"><img class="dsh-logo--on-dark" src="assets/img/devsynth-logo-white.png" alt="" width="640" height="159"></a>
+    <nav class="dsh-header__nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a aria-current="page" href="contact.html">Contact</a></nav>
+    <button class="dsh-theme" type="button" role="switch" aria-checked="false" aria-label="Dark theme" data-theme-toggle>
+      <span class="dsh-theme__knob" aria-hidden="true"></span>
+      <span class="dsh-theme__i dsh-theme__i--sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span>
+      <span class="dsh-theme__i dsh-theme__i--moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+    </button>
+    <a class="dsh-btn dsh-btn--primary dsh-btn--sm dsh-header__cta" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a>
+    <button class="dsh-header__toggle" type="button" aria-expanded="false" aria-controls="dsh-mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="dsh-header__mnav" id="dsh-mnav" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a></nav>
+</header>
+
+<main id="main">
+<!-- ===== CONTACT PAGE: the approved home contact block (H1 version) + other ways to reach us + short FAQ.
+     Hamza: the form posts to the same WordPress form as the home page (fields: name, email, need, details, nda). ===== -->
+<section class="dsh-sec dsh-contact dsh-contact--page" id="contact" aria-labelledby="dsh-contact-h">
+  <div class="dsh-wrap dsh-contact__grid">
+    <div class="dsh-contact__left" data-reveal>
+      <nav class="dsh-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact</span></nav>
+      <span class="dsh-eyebrow">CONTACT US</span>
+      <h1 id="dsh-contact-h">Tell us what <span class="dsh-grad">you’re building.</span></h1>
+      <p class="dsh-lead">Send us a message or book a call. You will hear back from the engineers who would do the work, not a sales team.</p>
+      <div class="dsh-contact__book"><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book a call</a><span>Prefer to talk? Pick a time that suits you.</span></div>
+      <ul class="dsh-contact__rows"><li><span class="dsh-contact__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span><div><small>Email us</small><b><a href="mailto:info@devsynth.us">info@devsynth.us</a></b></div></li><li><span class="dsh-contact__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.4a11 11 0 0 0 7 7l1.4-2.3L21 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span><div><small>Call us</small><b><a href="tel:+17274054545">+1 (727) 405-4545</a></b></div></li><li><span class="dsh-contact__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small>US office</small><b>St. Petersburg, FL 33702</b></div></li><li><span class="dsh-contact__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></span><div><small>Follow us</small><b><a href="https://www.linkedin.com/company/devsynth-us/" target="_blank" rel="noopener">LinkedIn</a></b></div></li></ul>
+    </div>
+    <div class="dsh-contact__card" data-reveal>
+      <form class="dsh-contact__form" action="#" method="post" data-contact novalidate>
+        <div class="dsh-contact__two">
+          <div class="dsh-contact__fld"><label for="c-name">Full name</label><input id="c-name" name="name" autocomplete="name" placeholder="Jane Smith" required></div>
+          <div class="dsh-contact__fld"><label for="c-email">Work email</label><input id="c-email" name="email" type="email" autocomplete="email" placeholder="jane@company.com" required></div>
+        </div>
+        <fieldset class="dsh-contact__fld"><legend>What do you need?</legend><div class="dsh-contact__pick"><label><input type="radio" name="need" value="build" checked><span class="dsh-contact__pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 3.5 7.4v9.2L12 21.2l8.5-4.6V7.4z"/><path d="M3.5 7.4 12 12l8.5-4.6M12 12v9.2"/></svg></span><span>Build a product<small>MVP or new feature</small></span></label><label><input type="radio" name="need" value="team"><span class="dsh-contact__pi"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0M15.5 4.9a3.4 3.4 0 0 1 0 6.3M18 14.2a6.2 6.2 0 0 1 3.2 5.8"/></svg></span><span>Add engineers<small>Grow your team</small></span></label><label><input type="radio" name="need" value="unsure"><span class="dsh-contact__pi"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg></span><span>Not sure yet<small>Help me choose</small></span></label></div></fieldset>
+        <div class="dsh-contact__fld"><label for="c-details">Project details <em>(optional)</em></label><textarea id="c-details" name="details" placeholder="What are you building, and where are you stuck?"></textarea></div>
+        <label class="dsh-contact__check"><input type="checkbox" name="nda" value="yes"><span>Send me an NDA before we talk <span class="dsh-todo">Ali: OK to offer?</span></span></label>
+        <p class="dsh-contact__err" role="alert" hidden>Please add your name and a valid email.</p>
+        <div class="dsh-contact__send"><button class="dsh-btn dsh-btn--primary" type="submit">Send message →</button></div>
+        <p class="dsh-contact__legal">By sending this form you agree to our <a href="privacy.html">Privacy Policy</a>. We only use your details to reply to you.</p>
+      </form>
+      <div class="dsh-contact__ok" role="status" hidden><span>✓</span><b>Thanks, we’ve got it.</b><p>A real person will reply, not a bot. Want to skip the back and forth? <a href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dsh-blk dsh-blk--alt">
+  <div class="dsh-wrap">
+    <div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">OTHER WAYS TO REACH US</span><h2>Looking for something else?</h2></div>
+    <div class="dsh-cards">
+      <article class="dsh-card dsh-card--hov" data-reveal><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="7" width="8" height="12" rx="4"/><path d="M12 7V4M4 13h4M16 13h4M5 8l3 2M19 8l-3 2M5 19l3-2M19 19l-3-2"/></svg></span><h3>Already a client?</h3><p>Report an issue or ask for help with a product we built or support for you.</p><span class="dsh-card__more">Go to Support →</span><a class="dsh-card__link" href="support.html" aria-label="Go to Support"></a></article>
+      <article class="dsh-card dsh-card--hov" data-reveal><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0M15.5 4.9a3.4 3.4 0 0 1 0 6.3M18 14.2a6.2 6.2 0 0 1 3.2 5.8"/></svg></span><h3>Want to join the team?</h3><p>We share open roles on LinkedIn. Follow us there to see them first. <span class="dsh-todo">Ali: Careers page or LinkedIn only?</span></p><span class="dsh-card__more">Devsynth on LinkedIn →</span><a class="dsh-card__link" href="https://www.linkedin.com/company/devsynth-us/" target="_blank" rel="noopener" aria-label="Devsynth on LinkedIn"></a></article>
+      <article class="dsh-card dsh-card--hov" data-reveal><span class="dsh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span><h3>Partnerships and press</h3><p>For partnerships, referrals and media questions, email us and we’ll get back to you.</p><span class="dsh-card__more">info@devsynth.us →</span><a class="dsh-card__link" href="mailto:info@devsynth.us" aria-label="Email info@devsynth.us"></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="dsh-blk">
+  <div class="dsh-wrap dsh-split">
+    <div class="dsh-blk__head" data-reveal><span class="dsh-eyebrow">BEFORE YOU WRITE</span><h2>Quick answers.</h2><p class="dsh-lead">The questions people ask most before the first call.</p></div>
+    <div class="dsh-faqs"><details class="dsh-q" open><summary>What happens after I send the form?<span aria-hidden="true"></span></summary><p>A real person reads it and replies by email, usually within one business day <span class="dsh-todo">confirm</span>. If it makes sense, we’ll set up a 30-minute call.</p></details><details class="dsh-q"><summary>Do I need a full brief?<span aria-hidden="true"></span></summary><p>No. A few lines on what you’re building and where you are today is enough. We’ll ask the rest on the call.</p></details><details class="dsh-q"><summary>Can we sign an NDA first?<span aria-hidden="true"></span></summary><p>Yes. Tick the box on the form, or ask on the call, and we’ll send one before you share details. <span class="dsh-todo">Ali: confirm</span></p></details><details class="dsh-q"><summary>How much will it cost?<span aria-hidden="true"></span></summary><p>It depends on the scope, so we don’t publish fixed prices. After the first call you get a clear scope and a quote before any work starts.</p></details></div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER: new design. Hamza: rebuild WordPress footer template 34817 to match. ===== -->
+<footer class="dsh-footer">
+  <div class="dsh-wrap">
+    <div class="dsh-footer__top">
+      <div class="dsh-footer__brand"><img src="assets/img/devsynth-logo-footer.png" alt="Devsynth" width="220" height="113" loading="lazy"><p>Technology. Design. Engineering. Together.</p>
+        <ul class="dsh-details"><li><a href="mailto:info@devsynth.us">info@devsynth.us</a></li><li><a href="tel:+17274054545">+1 (727) 405-4545</a></li><li>St. Petersburg, FL 33702, United States</li><li><a href="https://www.linkedin.com/company/devsynth-us/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div class="dsh-footer__col"><h4>RESOURCES</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div><div class="dsh-footer__col"><h4>SERVICES</h4><ul><li><a href="/services/custom-web-application-development/">Web Apps</a></li><li><a href="/services/cross-platform-mobile-apps/">Mobile Apps</a></li><li><a href="/services/customer-and-admin-portals/">Portals</a></li><li><a href="/services/saas-product-development/">SaaS Products</a></li><li><a href="service-mvp.html">MVP Development</a></li><li><a href="service-ai-features.html">Machine Learning</a></li><li><a href="/services/api-development-and-integrations/">API Integration</a></li><li><a href="/services/cloud-devops-and-support/">Cloud &amp; DevOps</a></li><li><a href="/services/payment-and-subscription-systems/">Payment Systems</a></li><li><a href="/services/data-engineering-and-dashboards/">Data &amp; Dashboards</a></li><li><a href="/services/ui-and-ux-design/">UI/UX Design</a></li><li><a href="/services/qa-and-software-testing/">QA Testing</a></li></ul></div><div class="dsh-footer__col"><h4>CASE STUDIES</h4><ul><li><a href="case-study-evdc.html">EVDC</a></li><li><a href="/case-studies/larimar-training/">Larimar Training</a></li><li><a href="/case-studies/al-qand-exchange-app/">Al Qand Exchange</a></li><li><a href="/case-studies/proud-profits/">Proud Profits</a></li><li><a href="/case-studies/outsorcy-sdr-platform/">Outsorcy SDR Platform</a></li><li><a href="/case-studies/chalk-performance-training/">Chalk Performance Training</a></li></ul></div>
+    </div>
+    <div class="dsh-footer__bottom"><span>© 2026 Devsynth. All rights reserved.</span><span>BUILDING DIGITAL PRODUCTS FOR WHAT’S NEXT.</span></div>
+  </div>
+</footer>
+
+</div>
+<script src="assets/js/pages.js?v=1" defer></script>
+<script src="assets/js/site.js?v=32"></script>
+
+</body>
+</html>

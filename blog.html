@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog: Building, Shipping and Fixing Products | Devsynth</title>
+<meta name="description" content="Practical guides for founders and CTOs on MVP scope, AI in production, rescuing stalled builds and working with engineering teams.">
+<!--
+  DEVSYNTH BLOG INDEX: HTML draft for Hamza.
+  Same nav, footer, theme switch and site.css / site.js as the home page; page styles in assets/css/pages.css.
+-->
+<script>
+  // runs before the page paints: JS flag for reveal animations, and the saved light/dark choice (no flash of the wrong theme)
+  document.documentElement.classList.add('js');
+  try { var dsTheme = localStorage.getItem('ds-theme'); if (dsTheme === 'dark' || dsTheme === 'light') document.documentElement.setAttribute('data-theme', dsTheme); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=125">
+<link rel="stylesheet" href="assets/css/pages.css?v=1">
+</head>
+<body>
+<div class="dsh">
+<!-- ===== HEADER: new nav bar. Already built on staging in WordPress header template 34656. ===== -->
+<header class="dsh-header">
+  <div class="dsh-header__bar">
+    <a class="dsh-header__logo" href="index.html" aria-label="Devsynth home"><img class="dsh-logo--on-light" src="assets/img/devsynth-logo-dark.png" alt="Devsynth" width="640" height="160"><img class="dsh-logo--on-dark" src="assets/img/devsynth-logo-white.png" alt="" width="640" height="159"></a>
+    <nav class="dsh-header__nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a></nav>
+    <button class="dsh-theme" type="button" role="switch" aria-checked="false" aria-label="Dark theme" data-theme-toggle>
+      <span class="dsh-theme__knob" aria-hidden="true"></span>
+      <span class="dsh-theme__i dsh-theme__i--sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span>
+      <span class="dsh-theme__i dsh-theme__i--moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+    </button>
+    <a class="dsh-btn dsh-btn--primary dsh-btn--sm dsh-header__cta" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a>
+    <button class="dsh-header__toggle" type="button" aria-expanded="false" aria-controls="dsh-mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="dsh-header__mnav" id="dsh-mnav" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Our Services</a><a href="case-studies.html">Our Projects</a><a href="contact.html">Contact</a><a class="dsh-btn dsh-btn--primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call</a></nav>
+</header>
+
+<main id="main">
+<!-- ===== BLOG INDEX: header, topic chips (pages.js), featured post, 3-column cards, newsletter strip, CTA.
+     Only the featured post is written (blog-post.html). The other cards are planned topics from research/case-studies-and-blog.md. ===== -->
+<section class="dsh-ph" style="padding-bottom:40px">
+  <div class="dsh-wrap">
+    <nav class="dsh-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Blog</span></nav>
+    <div data-reveal style="max-width:820px">
+      <span class="dsh-eyebrow">BLOG</span>
+      <h1>Notes on building, shipping <span class="dsh-grad">and fixing products.</span></h1>
+      <p class="dsh-lead">Practical guides for founders and CTOs, written by the engineers who do the work. No fluff, no price tables.</p>
+    </div>
+  </div>
+</section>
+<section class="dsh-blk" style="border-top:0;padding-top:20px">
+  <div class="dsh-wrap">
+    <div data-filter=".dsh-blog > [data-tags]"><div class="dsh-chips" role="group" aria-label="Filter by topic"><b>Topic</b><button class="dsh-chip" type="button" data-f="cat:mvp" aria-pressed="false">MVP and scope</button><button class="dsh-chip" type="button" data-f="cat:ai" aria-pressed="false">AI in production</button><button class="dsh-chip" type="button" data-f="cat:rescue" aria-pressed="false">Rescue and rebuilds</button><button class="dsh-chip" type="button" data-f="cat:teams" aria-pressed="false">Hiring and teams</button><button class="dsh-chip" type="button" data-f="cat:cost" aria-pressed="false">Planning and cost</button><button class="dsh-chip" type="button" data-f="cat:notes" aria-pressed="false">Case notes</button></div></div>
+    <div class="dsh-blog"><article class="dsh-bc dsh-bc--feat" data-tags="rescue" data-reveal><div class="dsh-bc__cover" style="--a:#0B1322;--b:#0D2546"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4"/></svg></div><div class="dsh-bc__body"><span class="dsh-bc__cat">Rescue and rebuilds · Featured</span><h3>7 signs your app needs a rescue, not a rewrite</h3><p>Your build has stalled and someone says “start over”. Before you do, check these seven signs. Most stalled apps can be finished.</p><div class="dsh-bc__meta"><span class="dsh-av">AH</span>Ali Hunain · 7 min read</div></div><a class="dsh-card__link" href="blog-post.html" aria-label="7 signs your app needs a rescue, not a rewrite"></a></article><article class="dsh-bc" data-tags="mvp" data-reveal><div class="dsh-bc__cover" style="--a:#0B1322;--b:#123A5E"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15c-1.5 1.5-2 4-2 6 2 0 4.5-.5 6-2M9 13l-2-2c1-4 5-8 13-8 0 8-4 12-8 13l-2-2"/><circle cx="15" cy="9" r="1.6"/></svg></div><div class="dsh-bc__body"><span class="dsh-bc__cat">MVP and scope</span><h3>How to cut your MVP scope in half without losing the point <span class="dsh-todo">planned topic</span></h3><p>A simple way to decide what v1 really needs, with a one-page scope worksheet.</p><div class="dsh-bc__meta"><span class="dsh-av">AH</span>Ali Hunain · 8 min read</div></div><a class="dsh-card__link" href="#" aria-label="How to cut your MVP scope in half without losing the point"></a></article><article class="dsh-bc" data-tags="ai" data-reveal><div class="dsh-bc__cover" style="--a:#0F1A33;--b:#1E2A6B"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><rect x="7" y="7" width="10" height="10" rx="2.5"/><path d="M10 10h4v4h-4z"/></svg></div><div class="dsh-bc__body"><span class="dsh-bc__cat">AI in production</span><h3>Shipping AI features: what changes after the demo works <span class="dsh-todo">planned topic</span></h3><p>Testing, speed, cost, fallbacks and handing off to a human. The parts demos skip.</p><div class="dsh-bc__meta"><span class="dsh-av">AH</span>Ali Hunain · 9 min read</div></div><a class="dsh-card__link" href="#" aria-label="Shipping AI features: what changes after the demo works"></a></article><article class="dsh-bc" data-tags="notes" data-reveal><div class="dsh-bc__cover" style="--a:#0B2216;--b:#0F3B26"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div><div class="dsh-bc__body"><span class="dsh-bc__cat">Case notes</span><h3>Two apps or one app with roles? Notes from building EVDC <span class="dsh-todo">planned topic</span></h3><p>Why drivers and charger owners got separate apps, and when one app is enough.</p><div class="dsh-bc__meta"><span class="dsh-av">AH</span>Ali Hunain · 6 min read</div></div><a class="dsh-card__link" href="#" aria-label="Two apps or one app with roles? Notes from building EVDC"></a></article><div class="dsh-news" data-tags="mvp ai rescue teams cost notes" data-reveal><div><h3>Get new posts by email</h3><p>One short email when we publish something useful. No spam, unsubscribe any time. <span class="dsh-todo">Ali: newsletter tool?</span></p></div>
+<form action="#" onsubmit="return false"><label class="sr-only" for="nl-email" style="position:absolute;left:-9999px">Work email</label><input id="nl-email" type="email" placeholder="you@company.com" autocomplete="email"><button class="dsh-btn dsh-btn--primary" type="submit">Subscribe</button></form></div><article class="dsh-bc" data-tags="teams" data-reveal><div class="dsh-bc__cover" style="--a:#1A1430;--b:#2B1E57"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0M15.5 4.9a3.4 3.4 0 0 1 0 6.3M18 14.2a6.2 6.2 0 0 1 3.2 5.8"/></svg></div><div class="dsh-bc__body"><span class="dsh-bc__cat">Hiring and teams</span><h3>In-house, agency or both? A guide for seed to Series A founders <span class="dsh-todo">planned topic</span></h3><p>How to decide who builds your product, and when to change the mix.</p><div class="dsh-bc__meta"><span class="dsh-av">AH</span>Ali Hunain · 8 min read</div></div><a class="dsh-card__link" href="#" aria-label="In-house, agency or both? A guide for seed to Series A founders"></a></article><article class="dsh-bc" data-tags="cost" data-reveal><div class="dsh-bc__cover" style="--a:#1F1A0E;--b:#3D2F0F"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div class="dsh-bc__body"><span class="dsh-bc__cat">Planning and cost</span><h3>What makes a software project cost more: 9 drivers you control <span class="dsh-todo">planned topic</span></h3><p>Scope, platforms, integrations, payments and more. No price tables, just the trade-offs.</p><div class="dsh-bc__meta"><span class="dsh-av">AH</span>Ali Hunain · 10 min read</div></div><a class="dsh-card__link" href="#" aria-label="What makes a software project cost more: 9 drivers you control"></a></article><article class="dsh-bc" data-tags="rescue" data-reveal><div class="dsh-bc__cover" style="--a:#0B1322;--b:#203450"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></div><div class="dsh-bc__body"><span class="dsh-bc__cat">Rescue and rebuilds</span><h3>Inheriting a codebase from another agency: the first 30 days <span class="dsh-todo">planned topic</span></h3><p>Access, review, quick wins and the plan. Step by step.</p><div class="dsh-bc__meta"><span class="dsh-av">AH</span>Ali Hunain · 7 min read</div></div><a class="dsh-card__link" href="#" aria-label="Inheriting a codebase from another agency: the first 30 days"></a></article></div>
+  </div>
+</section>
+<section class="dsh-cta" aria-labelledby="dsh-cta-h">
+  <span class="dsh-cta__shade" aria-hidden="true"></span>
+  <div class="dsh-cta__inner" data-reveal>
+    <div class="dsh-cta__copy"><span class="dsh-eyebrow">LET'S TALK</span><h2 id="dsh-cta-h">Got a product question <br>we haven’t covered?</h2><p>Book a 30-minute call. Bring the question, and we’ll give you a straight answer, even if it isn’t us.</p></div>
+    <div class="dsh-cta__btns"><a class="dsh-btn dsh-cta__primary" href="https://calendly.com/ali-devsynth/30min" target="_blank" rel="noopener">Book a call →</a><a class="dsh-btn dsh-cta__ghost" href="case-studies.html">See our work</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER: new design. Hamza: rebuild WordPress footer template 34817 to match. ===== -->
+<footer class="dsh-footer">
+  <div class="dsh-wrap">
+    <div class="dsh-footer__top">
+      <div class="dsh-footer__brand"><img src="assets/img/devsynth-logo-footer.png" alt="Devsynth" width="220" height="113" loading="lazy"><p>Technology. Design. Engineering. Together.</p>
+        <ul class="dsh-details"><li><a href="mailto:info@devsynth.us">info@devsynth.us</a></li><li><a href="tel:+17274054545">+1 (727) 405-4545</a></li><li>St. Petersburg, FL 33702, United States</li><li><a href="https://www.linkedin.com/company/devsynth-us/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div class="dsh-footer__col"><h4>RESOURCES</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div><div class="dsh-footer__col"><h4>SERVICES</h4><ul><li><a href="/services/custom-web-application-development/">Web Apps</a></li><li><a href="/services/cross-platform-mobile-apps/">Mobile Apps</a></li><li><a href="/services/customer-and-admin-portals/">Portals</a></li><li><a href="/services/saas-product-development/">SaaS Products</a></li><li><a href="service-mvp.html">MVP Development</a></li><li><a href="service-ai-features.html">Machine Learning</a></li><li><a href="/services/api-development-and-integrations/">API Integration</a></li><li><a href="/services/cloud-devops-and-support/">Cloud &amp; DevOps</a></li><li><a href="/services/payment-and-subscription-systems/">Payment Systems</a></li><li><a href="/services/data-engineering-and-dashboards/">Data &amp; Dashboards</a></li><li><a href="/services/ui-and-ux-design/">UI/UX Design</a></li><li><a href="/services/qa-and-software-testing/">QA Testing</a></li></ul></div><div class="dsh-footer__col"><h4>CASE STUDIES</h4><ul><li><a href="case-study-evdc.html">EVDC</a></li><li><a href="/case-studies/larimar-training/">Larimar Training</a></li><li><a href="/case-studies/al-qand-exchange-app/">Al Qand Exchange</a></li><li><a href="/case-studies/proud-profits/">Proud Profits</a></li><li><a href="/case-studies/outsorcy-sdr-platform/">Outsorcy SDR Platform</a></li><li><a href="/case-studies/chalk-performance-training/">Chalk Performance Training</a></li></ul></div>
+    </div>
+    <div class="dsh-footer__bottom"><span>© 2026 Devsynth. All rights reserved.</span><span>BUILDING DIGITAL PRODUCTS FOR WHAT’S NEXT.</span></div>
+  </div>
+</footer>
+
+</div>
+<script src="assets/js/site.js?v=32"></script>
+
+</body>
+</html>

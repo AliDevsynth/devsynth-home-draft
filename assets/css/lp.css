@@ -1,0 +1,73 @@
+/* Devsynth LinkedIn ad landing pages (lp-*.html). Loaded after site.css + pages.css.
+   No menu: logo + one "Book a call" button, one goal per page, minimal footer, sticky CTA bar on phones. */
+.dsh-lp .dsh-header__nav,.dsh-lp .dsh-header__toggle,.dsh-lp .dsh-header__mnav{display:none!important}
+.dsh-lp .dsh-header__logo{pointer-events:none}
+.dsh-lp .dsh-ph{padding-top:150px}
+.dsh-lp-under{margin-top:14px;font:500 14px Inter,sans-serif;color:#475569}
+.dsh-lp-under b{color:#0B1120}
+[data-theme=dark] .dsh-lp-under{color:#94A3B8}
+[data-theme=dark] .dsh-lp-under b{color:#fff}
+/* proof bar */
+.dsh-lp-bar{display:grid;grid-template-columns:repeat(4,1fr);border-radius:22px;background:#0B1322;overflow:hidden}
+.dsh-lp-bar li{padding:22px 26px;border-right:1px solid rgba(255,255,255,.08);color:#B6C2D1;font-size:14px;line-height:1.45}
+.dsh-lp-bar li:last-child{border-right:0}
+.dsh-lp-bar b{display:block;margin-bottom:4px;font:700 24px/1.15 Poppins,sans-serif;color:#fff}
+[data-theme=dark] .dsh-lp-bar{background:#111C30;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+/* options comparison */
+.dsh-lp-opt{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.dsh-lp-opt li{display:flex;flex-direction:column;gap:8px;padding:24px;border-radius:20px;background:#fff;border:1px solid #DFE6EF}
+.dsh-lp-opt b{font:600 17px Poppins,sans-serif;color:#0B1120}
+.dsh-lp-opt span{font-size:14.5px;line-height:1.6;color:#475569}
+.dsh-lp-opt em{margin-top:auto;padding-top:10px;font:normal 600 12px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#64748B}
+.dsh-lp-opt .is-us{background:#0B1322;border-color:#0B1322;box-shadow:0 22px 48px rgba(11,17,32,.22)}
+.dsh-lp-opt .is-us b{color:#fff}
+.dsh-lp-opt .is-us span{color:#B6C2D1}
+.dsh-lp-opt .is-us em{color:#7FD3FF}
+[data-theme=dark] .dsh-lp-opt li{background:#111C30;border-color:rgba(255,255,255,.08)}
+[data-theme=dark] .dsh-lp-opt b{color:#fff}
+[data-theme=dark] .dsh-lp-opt span{color:#B6C2D1}
+[data-theme=dark] .dsh-lp-opt .is-us{background:#12233D;border-color:rgba(0,177,255,.4)}
+/* symptom checklist */
+.dsh-lp-sym{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.dsh-lp-sym li{display:flex;gap:14px;align-items:center;padding:18px 20px;border-radius:16px;background:#fff;border:1px solid #DFE6EF;font:500 16px/1.5 Inter,sans-serif;color:#0B1120}
+.dsh-lp-sym li::before{content:"\2713";flex:none;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;background:linear-gradient(135deg,#0182CA,#00B1FF)}
+[data-theme=dark] .dsh-lp-sym li{background:#111C30;border-color:rgba(255,255,255,.08);color:#F1F5F9}
+/* person */
+.dsh-lp-person{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;padding:30px;border-radius:24px;background:#fff;border:1px solid #DFE6EF}
+.dsh-lp-person__ph{width:88px;height:88px;border-radius:24px;display:grid;place-items:center;font:700 28px Poppins,sans-serif;color:#fff;background:linear-gradient(135deg,#024AD8,#00B1FF)}
+.dsh-lp-person b{display:block;font:600 21px Poppins,sans-serif;color:#0B1120}
+.dsh-lp-person small{display:block;margin:2px 0 10px;font:500 14px Inter,sans-serif;color:#0182CA}
+.dsh .dsh-lp-person p{font-size:15.5px;line-height:1.65;color:#475569}
+.dsh-lp-person a{display:inline-block;margin-top:10px;font:600 14.5px Poppins,sans-serif;color:#024AD8}
+[data-theme=dark] .dsh-lp-person{background:#111C30;border-color:rgba(255,255,255,.08)}
+[data-theme=dark] .dsh-lp-person b{color:#fff}
+[data-theme=dark] .dsh .dsh-lp-person p{color:#B6C2D1}
+[data-theme=dark] .dsh-lp-person a{color:#7FD3FF}
+/* booking */
+.dsh-lp-book{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.dsh-lp-cal{position:relative;min-height:700px;border-radius:24px;overflow:hidden;background:#fff;border:1px solid #DFE6EF;box-shadow:0 30px 60px rgba(11,17,32,.1)}
+.dsh-lp-cal iframe{display:block;width:100%;height:700px;border:0}
+.dsh-lp-cal__ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:30px;text-align:center;color:#475569}
+.dsh-lp-cal__ph .dsh-ico{width:64px;height:64px;border-radius:20px}
+.dsh-lp-cal__ph b{font:600 20px Poppins,sans-serif;color:#0B1120}
+.dsh-lp-cal.is-loaded .dsh-lp-cal__ph{display:none}
+[data-theme=dark] .dsh-lp-cal{background:#111C30;border-color:rgba(255,255,255,.08)}
+[data-theme=dark] .dsh-lp-cal__ph b{color:#fff}
+/* minimal footer */
+.dsh-lp-foot{padding:34px 0;background:#070D18;color:#94A3B8;font-size:14px}
+.dsh-lp-foot .dsh-wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.dsh-lp-foot a{color:#CBD5E1;text-decoration:underline}
+/* sticky mobile CTA */
+.dsh-lp-sticky{display:none}
+@media (max-width:1100px){.dsh-lp-bar,.dsh-lp-opt{grid-template-columns:1fr 1fr}.dsh-lp-bar li:nth-child(2){border-right:0}.dsh-lp-bar li:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}.dsh-lp-book{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){
+  .dsh-lp-opt,.dsh-lp-sym{grid-template-columns:1fr}.dsh-lp-person{grid-template-columns:1fr}
+  .dsh-lp-sticky{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;border-radius:18px;background:rgba(11,19,34,.94);backdrop-filter:blur(10px);box-shadow:0 18px 40px rgba(11,17,32,.35);color:#E2E8F0;font:500 13.5px Inter,sans-serif}
+  .dsh-lp-sticky .dsh-btn{padding:11px 16px;font-size:14px}
+  .dsh-lp-foot{padding-bottom:100px}
+}
+.dsh-lp .dsh-theme{margin-left:auto}
+.dsh-commit--4{grid-template-columns:repeat(4,1fr)}
+.dsh-commit--3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1100px){.dsh-commit--4{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.dsh-commit--4,.dsh-commit--3{grid-template-columns:1fr}}
